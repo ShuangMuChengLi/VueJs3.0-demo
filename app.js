@@ -1,5 +1,6 @@
 const createError = require('http-errors');
 const express = require('express');
+const proxy = require('http-proxy-middleware');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const webpack = require('webpack');
