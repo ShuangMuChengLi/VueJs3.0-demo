@@ -11,13 +11,7 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new CopyWebpackPlugin([
             { from: 'resource', to: 'resource' }
-        ]),
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "./src/html/index.html"),
-            filename: "index.html",
-            chunks: ["app"],
-            inject: "body"
-        })
+        ])
     ],
     output: {
         filename: '[name].bundle.js',
