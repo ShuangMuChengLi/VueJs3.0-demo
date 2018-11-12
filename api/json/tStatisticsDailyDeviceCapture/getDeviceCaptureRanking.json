@@ -1,0 +1,22 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": [
+        {
+            "gbId": "3502010001011",
+            "deviceName": "测试摄像头1",
+            "statisticsCount": 30
+        },
+        {
+            "gbId": "3502010001012",
+            "deviceName": "测试摄像头2",
+            "statisticsCount": 29
+        },
+        {
+            "gbId": "3502010001013",
+            "deviceName": "测试摄像头3",
+            "statisticsCount": 28
+        }
+    ]
+}

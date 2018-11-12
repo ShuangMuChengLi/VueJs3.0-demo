@@ -1,0 +1,16 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": {
+        "longitude": 118.1,
+        "latitude": 24.9,
+        "deviceName": "测试摄像头",
+        "orgName": "思明区",
+        "captureCount": 3500000,
+        "alarmCount": 3000,
+        "faceHitRate": "10%",
+        "alarmRate": "20%",
+        "deviceType":"路口"
+    }
+}

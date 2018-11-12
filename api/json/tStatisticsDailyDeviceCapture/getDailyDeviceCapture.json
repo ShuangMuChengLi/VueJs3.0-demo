@@ -1,0 +1,19 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": [
+        {
+            "statisticsDate": "2018-10-29",
+            "captureCount": 100,
+            "captureNoHelmetCount": 60,
+            "captureNoEntryCount": 30
+        },
+        {
+            "statisticsDate": "2018-10-30",
+            "captureCount": 200,
+            "captureNoHelmetCount": 80,
+            "captureNoEntryCount": 50
+        }
+    ]
+}

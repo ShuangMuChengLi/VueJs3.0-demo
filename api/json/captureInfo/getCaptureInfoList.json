@@ -1,0 +1,787 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": {
+        "total": 1000,
+        "rows": [
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "认证失败",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|酒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "认证成功",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "李四",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "王五",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/2.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/2.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "琳琳",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            },
+            {
+                "sceneUrL": "/public/image/capture/1.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "captureTime": "2018-10-30 12:00:12",
+                "deviceName": "测试摄像头",
+                "gbid": "35020300000012",
+                "type": "非机动车",
+                "alarmType": "没戴头盔",
+                "captureId": "35000000111",
+                "vehicleUrl": "/public/image/capture/1.jpg",
+                "confirmResult": "待认证",
+                "confirmInfo": [{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                },{
+                    "personId": "D00T00123",
+                    "personImgId": "D00T014456",
+                    "personName": "张三",
+                    "idCard": "350200000000000",
+                    "personLabel": "重点|毒",
+                    "similarity": 89.9,
+                    "faceUrl": "/public/image/capture/1.jpg",
+                    "compareImgUrl":"/public/image/capture/1.jpg"
+                }
+                ]
+            }
+        ]
+    }
+}

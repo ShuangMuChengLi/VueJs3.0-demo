@@ -1,0 +1,66 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": {
+        "total": 1024,
+        "rows": [
+            {
+                "captureInfoId": "123123",
+                "captureDeviceName": "测试",
+                "captureTime": "2018-11-01 10:10:10",
+                "sceneUrl": "http://10.130.14/i7501.jpg",
+                "faceUrl": "http://10.130.14/i7501.jpg",
+                "similarity": 89.6,
+                "capturePersonName": "张三",
+                "capturePersonLabel": "重点|精神",
+                "capturePersonImgUrl": "http://10.101.jpg"
+            },
+            {
+                "captureInfoId": "123123",
+                "captureDeviceName": "测试",
+                "captureTime": "2018-11-01 10:10:10",
+                "sceneUrl": "http://10.130.14/i7501.jpg",
+                "faceUrl": "http://10.130.14/i7501.jpg",
+                "similarity": 89.6,
+                "capturePersonName": "张三",
+                "capturePersonLabel": "重点|精神",
+                "capturePersonImgUrl": "http://10.101.jpg"
+            },
+            {
+                "captureInfoId": "123123",
+                "captureDeviceName": "测试",
+                "captureTime": "2018-11-01 10:10:10",
+                "sceneUrl": "http://10.130.14/i7501.jpg",
+                "faceUrl": "http://10.130.14/i7501.jpg",
+                "similarity": 89.6,
+                "capturePersonName": "张三",
+                "capturePersonLabel": "重点|精神",
+                "capturePersonImgUrl": "http://10.101.jpg"
+            },
+            {
+                "captureInfoId": "123123",
+                "captureDeviceName": "测试",
+                "captureTime": "2018-11-01 10:10:10",
+                "sceneUrl": "http://10.130.14/i7501.jpg",
+                "faceUrl": "http://10.130.14/i7501.jpg",
+                "similarity": 89.6,
+                "capturePersonName": "张三",
+                "capturePersonLabel": "重点|精神",
+                "capturePersonImgUrl": "http://10.101.jpg"
+            },
+            {
+                "captureInfoId": "123123",
+                "captureDeviceName": "测试",
+                "captureTime": "2018-11-01 10:10:10",
+                "sceneUrl": "http://10.130.14/i7501.jpg",
+                "faceUrl": "http://10.130.14/i7501.jpg",
+                "similarity": 89.6,
+                "capturePersonName": "张三",
+                "capturePersonLabel": "重点|精神",
+                "capturePersonImgUrl": "http://10.101.jpg"
+            }
+
+        ]
+    }
+}

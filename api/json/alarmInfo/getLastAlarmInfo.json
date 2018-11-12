@@ -1,0 +1,24 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": {
+        "total": 1024,
+        "rows": [
+            {
+                "sceneUrl": "http://35.48.98.204:9090/imageInfo/901czrkjbxx/VW_YW_CZRK_JBXX_840000_845000/D00T901R20170426165450629530.jpg",
+                "imagePosition": {
+                    "x": "100",
+                    "y": "11",
+                    "w": "100",
+                    "h": "100"
+                },
+                "type": "非机动车",
+                "alarmType": "禁行",
+                "captureTime": "2018-10-21 12:15:38",
+                "gbId": "3502010001012",
+                "deviceName": "人脸入库测试016"
+            }
+        ]
+    }
+}

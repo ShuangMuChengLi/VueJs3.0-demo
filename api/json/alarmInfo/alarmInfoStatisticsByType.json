@@ -1,0 +1,13 @@
+{
+    "successFlag":true,
+    "message":"调用成功",
+    "errorCode":200,
+    "data":[{
+        "alarmType": "没戴头盔",
+        "alarmCount": "80"
+    }, {
+        "alarmType": "禁行",
+        "alarmCount": "50"
+    }
+    ]
+}

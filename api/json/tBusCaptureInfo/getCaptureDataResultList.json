@@ -1,0 +1,30 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": {
+        "total": 1024,
+        "rows": [
+            {
+                "personId": "D00T0123",
+                "idCard": "35020000",
+                "name": "张三",
+                "imgUrl": " http://10.130.14/imag17501.jpg",
+                "label": "重点|精神",
+                "captureCount": 100,
+                "deviceCount": 100,
+                "dateCount": 100
+            },
+            {
+                "personId": "D00T4567",
+                "idCard": "35020000",
+                "name": "张三",
+                "imgUrl": " http://10.130.14/imag17501.jpg",
+                "label": "重点|精神",
+                "captureCount": 100,
+                "deviceCount": 100,
+                "dateCount": 100
+            }
+        ]
+    }
+}

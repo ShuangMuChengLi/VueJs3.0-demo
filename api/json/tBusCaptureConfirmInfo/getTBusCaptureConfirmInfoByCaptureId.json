@@ -1,0 +1,10 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": {
+        "isVehicle": 1,
+        "isHelmet": 0,
+        "confirmCaptureId": "123"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": {
+        "deviceCount": 1000,
+        "allAlarmCount": 30000,
+        "currentMonthAlarmCount": 300,
+        "allCaptureCount": 2000000,
+        "currentMonthCaptureCount": 20000,
+        "allWarningInstanceCount": 20000,
+        "currentMonthWarningInstanceCount": 2000
+    }
+}

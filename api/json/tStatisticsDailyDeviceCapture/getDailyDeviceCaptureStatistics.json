@@ -1,0 +1,86 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": [
+        {
+            "statisticsDate": "2018-10-15",
+            "captureCount": 110,
+            "alarmCount": 66
+        },
+        {
+            "statisticsDate": "2018-10-16",
+            "captureCount": 50,
+            "alarmCount": 70
+        },
+        {
+            "statisticsDate": "2018-10-17",
+            "captureCount": 120,
+            "alarmCount": 10
+        },
+        {
+            "statisticsDate": "2018-10-18",
+            "captureCount": 130,
+            "alarmCount": 48
+        },
+        {
+            "statisticsDate": "2018-10-19",
+            "captureCount": 52,
+            "alarmCount": 169
+        },
+        {
+            "statisticsDate": "2018-10-20",
+            "captureCount": 110,
+            "alarmCount": 141
+        },
+        {
+            "statisticsDate": "2018-10-21",
+            "captureCount": 124,
+            "alarmCount": 126
+        },{
+            "statisticsDate": "2018-10-22",
+            "captureCount": 40,
+            "alarmCount": 52
+        },
+        {
+            "statisticsDate": "2018-10-23",
+            "captureCount": 36,
+            "alarmCount": 97
+        },
+        {
+            "statisticsDate": "2018-10-24",
+            "captureCount": 85,
+            "alarmCount": 75
+        },
+        {
+            "statisticsDate": "2018-10-25",
+            "captureCount": 95,
+            "alarmCount": 91
+        },
+        {
+            "statisticsDate": "2018-10-26",
+            "captureCount": 85,
+            "alarmCount": 35
+        },
+        {
+            "statisticsDate": "2018-10-27",
+            "captureCount": 87,
+            "alarmCount": 100
+        },
+        {
+            "statisticsDate": "2018-10-28",
+            "captureCount": 120,
+            "alarmCount": 66
+        },
+        {
+            "statisticsDate": "2018-10-29",
+            "captureCount": 100,
+            "alarmCount": 60
+        },
+        {
+            "statisticsDate": "2018-10-30",
+            "captureCount": 120,
+            "alarmCount": 66
+        }
+    ]
+}

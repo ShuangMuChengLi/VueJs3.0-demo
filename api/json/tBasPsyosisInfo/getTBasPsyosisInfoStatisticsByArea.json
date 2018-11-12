@@ -1,0 +1,20 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": {
+        "total": 1024,
+        "rows": [
+            {
+                "orgCode": "350203",
+                "orgName": " 思明区",
+                "personCount": 1024
+            },
+            {
+                "orgCode": "350206",
+                "orgName": " 湖里区",
+                "personCount": 1024
+            }
+        ]
+    }
+}

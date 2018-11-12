@@ -1,0 +1,50 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": {
+        "total": 1,
+        "rows": [
+            {
+                "alarmType": "非机动车事故",
+                "type": "交通事故",
+                "alarmTime": "2018-10-30 00:00:00",
+                "address": "吕岭路",
+                "longitude": "118.1578302383423",
+                "latitude": "24.488515490966705",
+                "briefAlarm": "发生了易启摩托车辆撞到行人事故，至多人重伤入院",
+                "alarmId": "35020000001"
+            },
+            {
+                "alarmType": "其他事故",
+                "type": "交通事故",
+                "alarmTime": "2018-10-30 00:00:00",
+                "address": "圆山南路",
+                "longitude": "118.1289482116699",
+                "latitude": "24.509974309668507",
+                "briefAlarm": "有非机动车刮擦",
+                "alarmId": "35020000002"
+            },
+            {
+                "alarmType": "其他事故",
+                "type": "交通事故",
+                "alarmTime": "2018-10-30 00:00:00",
+                "address": "东渡路",
+                "longitude": "118.07639837265015",
+                "latitude": "24.49140551796947",
+                "briefAlarm": "有非机动车刮擦",
+                "alarmId": "35020000003"
+            },
+            {
+                "alarmType": "亡人事故",
+                "type": "交通事故",
+                "alarmTime": "2018-10-30 00:00:00",
+                "address": "新阳大桥",
+                "longitude": "118.0283975601196",
+                "latitude": "24.54400020878161",
+                "briefAlarm": "死了好多人",
+                "alarmId": "35020000004"
+            }
+        ]
+    }
+}

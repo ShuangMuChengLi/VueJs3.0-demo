@@ -1,0 +1,13 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": {
+        "captureCount": 300000,
+        "nonMotorizedVehicleCount": 5000,
+        "noHelmetCount": 300,
+        "wineDrivingCount": 600,
+        "poisonDrivingCount": 200,
+        "otherCount": 100
+    }
+}

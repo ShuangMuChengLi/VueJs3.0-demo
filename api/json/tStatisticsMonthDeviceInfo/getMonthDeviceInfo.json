@@ -1,0 +1,56 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": [
+        {
+            "caculateMonth": "2018-08",
+            "orgName": "思明区",
+            "deviceCount": 60,
+            "captureCount": 3100,
+            "alarmCount": 30
+        },
+        {
+            "caculateMonth": "2018-08",
+            "orgName": "湖里区",
+            "deviceCount": 60,
+            "captureCount": 3200,
+            "alarmCount": 30
+        },
+        {
+            "caculateMonth": "2018-09",
+            "orgName": "思明区",
+            "deviceCount": 60,
+            "captureCount": 3400,
+            "alarmCount": 30
+        },
+        {
+            "caculateMonth": "2018-09",
+            "orgName": "湖里区",
+            "deviceCount": 60,
+            "captureCount": 3500,
+            "alarmCount": 30
+        },
+        {
+            "caculateMonth": "2018-10",
+            "orgName": "思明区",
+            "deviceCount": 60,
+            "captureCount": 300,
+            "alarmCount": 30
+        },
+        {
+            "caculateMonth": "2018-10",
+            "orgName": "湖里区",
+            "deviceCount": 60,
+            "captureCount": 300,
+            "alarmCount": 30
+        },
+        {
+            "caculateMonth": "2018-11",
+            "orgName": "湖里区",
+            "deviceCount": 70,
+            "captureCount": 350,
+            "alarmCount": 50
+        }
+    ]
+}

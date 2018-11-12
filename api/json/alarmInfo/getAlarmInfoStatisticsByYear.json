@@ -1,0 +1,31 @@
+{
+    "successFlag": true,
+    "message": "调用成功",
+    "errorCode": 200,
+    "data": [
+        {
+            "statisticsMonth": "1月",
+            "statisticsYear": "2018",
+            "deadCount": 20,
+            "injuredCount": 100
+        },
+        {
+            "statisticsMonth": "2月",
+            "statisticsYear": "2018",
+            "deadCount": 10,
+            "injuredCount": 80
+        },
+        {
+            "statisticsMonth": "1月",
+            "statisticsYear": "2017",
+            "deadCount": 210,
+            "injuredCount": 1100
+        },
+        {
+            "statisticsMonth": "2月",
+            "statisticsYear": "2017",
+            "deadCount": 101,
+            "injuredCount": 810
+        }
+    ]
+}
