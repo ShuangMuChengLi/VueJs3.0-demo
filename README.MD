@@ -20,3 +20,5 @@ npm build
 #更新日志
 ##20181113
 环境变量NODE_ENV在package.json里配置。config/env.js指向process.env.NODE_ENV
+
+新增less编译
