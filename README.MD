@@ -1,3 +1,10 @@
+基础框架使用Node.js作为服务器，使用npm包http-proxy-middleware作反向代理。在app.js中配置。
+
+当前使用webpack，集成了less。
+
+将集成：ES6的balel，及其压缩模块BabelMinifyWebpackPlugin
+
+待定集成：Vue.js或者React.js。
 # 启动
 ## 开发环境
 ```bash
