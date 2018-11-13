@@ -4,11 +4,11 @@
 npm install
 npm start
 ```
-## 开发环境(watch)
+## 开发环境(watch模式，node.js与webpack编译分开执行)
 ```bash
 npm install
-npm run watch:start
-npm run watch
+npm run watch:start  #启动node.js
+npm run watch        #webpack编译
 ```
 ## 生产环境
 ```bash
