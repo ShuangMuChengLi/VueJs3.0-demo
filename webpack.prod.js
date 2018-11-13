@@ -4,9 +4,10 @@ const merge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = merge(common, {
+    mode: 'production',
     module: {
         rules: [
             {
@@ -19,7 +20,14 @@ module.exports = merge(common, {
             }
         ],
     },
-
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        },
+        minimizer: [
+            new OptimizeCSSAssetsPlugin({})
+        ]
+    },
     // optimization: {
     //     splitChunks: {
     //         chunks: 'all'

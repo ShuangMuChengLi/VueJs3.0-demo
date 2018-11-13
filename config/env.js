@@ -1,2 +1,2 @@
-const ENV = process.env.NODE_ENV;
+let ENV = process.env.NODE_ENV;
 module.exports = ENV;
