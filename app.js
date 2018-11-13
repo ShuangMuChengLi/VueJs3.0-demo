@@ -5,25 +5,30 @@ const url = require('url');
 const proxy = require('http-proxy-middleware');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
-// webpack配置
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
-const config = require('./webpack.dev');
-const compiler = webpack(config);
+const env = require('./config/env');
 const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(webpackDevMiddleware(compiler, {
-    publicPath: config.output.publicPath
-}));
+
+// webpack配置
+if(env === "dev"){
+    const config = require('./webpack.dev');
+    const compiler = webpack(config);
+    app.use(webpackDevMiddleware(compiler, {
+        publicPath: config.output.publicPath
+    }));
+}
+
+
+
 // 静态资源文件夹
 app.use(express.static(path.join(__dirname, "dist")));
 app.use(express.static(path.join(__dirname, "api")));
 
 // 本地json模拟远程服务器api  post请求转get
 app.use('/api/*', function (req , res, next) {
-    console.log(111)
     if(req.method === "POST"){
         req.method = "GET";
     }

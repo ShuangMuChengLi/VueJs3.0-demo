@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-
+console.log("build")
 var app = require('../app');
 var debug = require('debug')('project-init:server');
 var http = require('http');
