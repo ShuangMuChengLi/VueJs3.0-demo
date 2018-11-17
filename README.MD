@@ -40,4 +40,5 @@ npm build
 
 5、exports-loader  ,设置全局exports
 
-6、添加了es6编译器babel
+6、添加了es6编译器babel-loader、@babel/core、@babel/preset-env、@babel/plugin-transform-runtime、@babel/runtime、@babel/runtime-corejs2。从而支持Class、Promise等特性
+
