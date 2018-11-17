@@ -35,3 +35,7 @@ npm build
 2、runtime代码分离打包，runtimeChunk: 'single',
 
 3、HashedModuleIdsPlugin插件
+
+4、添加imports-loader，设置Granular Shimming,如为某个js设置this变量指向window
+
+5、exports-loader  ,设置全局exports

@@ -11,6 +11,7 @@ module.exports = {
 
     module: {
         rules: [
+
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
@@ -34,7 +35,17 @@ module.exports = {
                 use: [
                     'xml-loader'
                 ]
-            }
+            },
+            // 设置全局exports
+            // {
+            //     test: require.resolve('./src/js/globals.js'),
+            //     use: 'exports-loader?file,parse=helpers.parse'
+            // },
+            // 设置this变量
+            // {
+            //     test: require.resolve('./src/js/index.js'),
+            //     use: 'imports-loader?this=>window'
+            // },
         ]
     },
     plugins: [
