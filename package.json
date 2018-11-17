@@ -16,6 +16,7 @@
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
+    "lodash": "^4.17.11",
     "morgan": "~1.9.0"
   },
   "devDependencies": {
@@ -29,6 +30,7 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.4",
+    "open": "^0.0.5",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.0.1",

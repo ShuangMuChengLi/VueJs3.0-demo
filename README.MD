@@ -29,3 +29,9 @@ npm build
 环境变量NODE_ENV在package.json里配置。config/env.js指向process.env.NODE_ENV
 
 新增less编译与压缩
+## 20181117（林超群）
+1、添加了全局变量插件ProvidePlugin
+
+2、runtime代码分离打包，runtimeChunk: 'single',
+
+3、HashedModuleIdsPlugin插件

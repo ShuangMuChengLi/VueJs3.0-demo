@@ -5,6 +5,7 @@ const url = require('url');
 const proxy = require('http-proxy-middleware');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const open = require('open');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const env = require('./config/env');
@@ -14,10 +15,18 @@ app.set('view engine', 'ejs');
 
 // webpack配置
 if(env === "dev"){
+    let opened = false;
     const config = require('./webpack.dev');
     const compiler = webpack(config);
     app.use(webpackDevMiddleware(compiler, {
         publicPath: config.output.publicPath
+    }));
+    compiler.apply(new webpack.ProgressPlugin(function (percentage, msg) {
+        console.log(percentage);
+        if (percentage === 1 && !opened) {
+            opened = true;
+            open("http://localhost:3000");
+        }
     }));
 }
 
@@ -43,7 +52,6 @@ const apiProxyLocal = proxy('/api', {
         let pathname = obj.pathname;
         let first = pathname.replace(/^\/api/ , "");
         let two = first.replace(/$/ , ".json");
-        console.log(two)
         return two + (search || "");
     }
 });
