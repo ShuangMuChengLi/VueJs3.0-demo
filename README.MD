@@ -1,6 +1,9 @@
 基础框架使用Node.js作为服务器，使用npm包http-proxy-middleware作反向代理，在app.js中配置。
-git分支
+
+git分支:
+
 master:基础工程
+
 es6:集成了es6编译
 # 启动
 ## 开发环境
