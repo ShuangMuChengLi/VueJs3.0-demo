@@ -3,7 +3,6 @@
 // const axios = require("axios");
 // const config = require("../../config/config");
 // const env = require("../../config/env");
-window.Promise = Promise
 for(let item of [1,2,3]){
     console.log(item)
 }
@@ -14,7 +13,7 @@ for(let item of [1,2,3]){
 
 function fn() {
     let promise = new Promise((resolve , reject)=>{
-        resolve(1)
+        resolve("promise test")
     });
     return promise;
 }
@@ -31,3 +30,9 @@ class Animal {
 }
 let cat = new Animal("cat")
 cat.say();
+
+async function asyncFn(){
+    let data = await fn();
+    console.log(data)
+}
+asyncFn();
