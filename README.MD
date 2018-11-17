@@ -1,8 +1,8 @@
-基础框架使用Node.js作为服务器，使用npm包http-proxy-middleware作反向代理。在app.js中配置。
+基础框架使用Node.js作为服务器，使用npm包http-proxy-middleware作反向代理，在app.js中配置。
 
-当前使用webpack，集成了less。
+当前使用webpack，集成了less、ES6的balel
 
-将集成：ES6的balel，及其压缩模块BabelMinifyWebpackPlugin
+将集成：压缩模块BabelMinifyWebpackPlugin
 
 待定集成：Vue.js或者React.js。
 # 启动
@@ -39,3 +39,5 @@ npm build
 4、添加imports-loader，设置Granular Shimming,如为某个js设置this变量指向window
 
 5、exports-loader  ,设置全局exports
+
+6、添加了es6编译器babel
