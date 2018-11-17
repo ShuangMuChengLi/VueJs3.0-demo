@@ -1,10 +1,4 @@
 基础框架使用Node.js作为服务器，使用npm包http-proxy-middleware作反向代理，在app.js中配置。
-
-当前使用webpack，集成了less、ES6的balel
-
-将集成：压缩模块BabelMinifyWebpackPlugin
-
-待定集成：Vue.js或者React.js。
 # 启动
 ## 开发环境
 ```bash
@@ -41,4 +35,4 @@ npm build
 5、exports-loader  ,设置全局exports
 
 6、添加了es6编译器babel-loader、@babel/core、@babel/preset-env、@babel/plugin-transform-runtime、@babel/runtime、@babel/runtime-corejs2。从而支持Class、Promise、async/await等特性
-
+7、添加babel  es6压缩插件.babel-minify-webpack-plugin
