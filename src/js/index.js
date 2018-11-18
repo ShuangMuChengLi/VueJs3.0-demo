@@ -3,6 +3,8 @@
 // const axios = require("axios");
 // const config = require("../../config/config");
 // const env = require("../../config/env");
+import { polyfill } from 'es6-promise'
+polyfill();
 for(let item of [1,2,3]){
     console.log(item)
 }
