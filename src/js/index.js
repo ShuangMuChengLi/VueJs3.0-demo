@@ -3,38 +3,38 @@
 // const axios = require("axios");
 // const config = require("../../config/config");
 // const env = require("../../config/env");
-import { polyfill } from 'es6-promise'
+import { polyfill } from 'es6-promise';
 polyfill();
 for(let item of [1,2,3]){
-    console.log(item)
+  console.log(item);
 }
 
 (()=>{
-    console.log("test")
+  console.log('test');
 })();
 
 function fn() {
-    let promise = new Promise((resolve , reject)=>{
-        resolve("promise test")
-    });
-    return promise;
+  let promise = new Promise((resolve , reject)=>{
+    resolve('promise test');
+  });
+  return promise;
 }
 fn().then((data)=>{
-    console.log(data)
-})
+  console.log(data);
+});
 class Animal {
-    constructor(name) {
-        this.name = name
-    }
-    say(){
-        document.getElementById("result").innerHTML = this.name
-    }
+  constructor(name) {
+    this.name = name;
+  }
+  say(){
+    document.getElementById('result').innerHTML = this.name;
+  }
 }
-let cat = new Animal("cat")
+let cat = new Animal('cat');
 cat.say();
 
 async function asyncFn(){
-    let data = await fn();
-    console.log(data)
+  let data = await fn();
+  console.log(data);
 }
 asyncFn();
