@@ -3,19 +3,20 @@
     <selection-picture
       :width="500"
       :height="500"
-      src="./demo/img/473143.jpg"
+      :src="img"
     />
   </div>
 </template>
 
 <script>
+import img from './img/473143.jpg';
 export default {
   components:{
     'selection-picture':()=>import('../src/public/selection-picture.vue')
   },
   data(){
     return{
-
+      img
     };
   },
   computed:{

@@ -18,7 +18,7 @@
       "localNginxConfPath": "本地nginx配置文件目录"
     }
   },
-  "buildTarget": "current",
+  "buildTarget": "default",
   "api": "/remove-api",
   "api_local": "/api/json",
   "port": 9999,
