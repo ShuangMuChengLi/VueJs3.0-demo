@@ -33,6 +33,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ####  20200420
 版本：3.0.0
 1. 重构框架，新建分支3.0.0
-2. 使用vue-cli脚手架编译vue.js代码，命令yarn start
-2. 启动本地json的api服务，命令yarn api
+2. 使用vue-cli脚手架编译vue.js代码，命令yarn start。代理在vue.config.js中配置，不再使用app.js设置代理
+3. 启动本地json的api服务，命令yarn api
  
