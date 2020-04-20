@@ -4,13 +4,14 @@
  * Module dependencies.
  */
 var app = require('./app');
-var config = require('../config/config');
 var http = require('http');
+
+const { exec, spawn } = require('child_process');
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || config.port);
+var port = normalizePort(process.env.PORT || 10999);
 app.set('port', port);
 
 /**

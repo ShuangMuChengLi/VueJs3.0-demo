@@ -1,0 +1,59 @@
+<template>
+  <div class="wrapper">
+    <div
+      v-removable="'#btn'"
+      class="box"
+    >
+      <el-button
+        id="btn"
+        size="mini"
+        type="primary"
+      >
+        点击拖拽
+      </el-button>
+    </div>
+    <div
+      v-removable
+      class="box2"
+    >
+      点击拖拽
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'VRemovableDemo',
+  mounted() {
+    this.$emit('setCode', '/demo/v-removable-demo.vue');
+    this.$emit('setInfo',
+      `<h3>指令：v-removable</h3>
+        用于让html能够拖动的指令，主要用于弹窗的可拖动 v-removable(npm包：vue-removable）<br />
+        <a href="https://github.com/euvl/v-clipboard">https://github.com/ShuangMuChengLi/vue-removable</a>`
+    );
+  }
+};
+</script>
+
+<style scoped lang="less">
+  .wrapper{
+    position: relative;
+    margin: 100px;
+  }
+  .box{
+    border: 1px solid #333;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  .box2{
+    border: 1px solid #333;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 350px;
+  }
+</style>

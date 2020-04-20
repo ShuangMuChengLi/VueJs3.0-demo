@@ -3,39 +3,13 @@ const express = require('express');
 const path = require('path');
 const url = require('url');
 const proxy = require('http-proxy-middleware');
-const env = process.env.NODE_ENV;
-const config = require('../config/config');
+var cors = require('cors');
 const app = express();
 
-// 开发环境下，Node.js的express框架集成webpack即时编译
-if(env === 'development'){
-  const webpackDevMiddleware = require('webpack-dev-middleware');
-  const webpack = require('webpack');
-  const webpackConfig = require('../webpack.dev');
-  const compiler = webpack(webpackConfig);
-  // Node.js的express框架集成webpack即时编译
-  app.use(webpackDevMiddleware(compiler, {
-    publicPath: webpackConfig.output.publicPath,
-    quiet: true,
-    stats: {
-      colors: true,
-      chunks: false
-    },
-    watchOptions: {
-      aggregateTimeout: 300,
-      poll: true
-    }
-  }));
-  // 热重载
-  if(config.hmr){
-    app.use(require('webpack-hot-middleware')(compiler));
-  }
-}
-
+app.use(cors());
 // 静态资源文件夹
-app.use(express.static(path.join(__dirname, '../dist')));
 app.use(express.static(path.join(__dirname, '../api')));
-app.use(express.static(path.join(__dirname, '../')));
+app.use(express.static(path.join(__dirname, '../demo')));
 
 // 本地json模拟远程服务器api  post请求转get
 // 接口名字后面添加请求方式，与本地json一一映射
@@ -43,7 +17,7 @@ app.use(express.static(path.join(__dirname, '../')));
 app.use('/api/*', function (req, res, next) {
   let baseUrl = req.baseUrl;
   proxy('/api', {
-    target: 'http://localhost:' + config.port,
+    target: 'http://localhost:10999',
     pathRewrite: function (path) {
       switch (req.method) {
       case 'POST':
@@ -72,16 +46,6 @@ app.use('/api/*', function (req, res, next) {
   })(req, res);
 });
 
-// 代理服务器api
-// 代理项目服务器api
-app.use(`${config.api}/*`, proxy(`${config.api}`, {
-  target: config.server,
-  changeOrigin: false,
-  ws: true,
-  pathRewrite:{
-    [config.api]: ''
-  }
-}));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

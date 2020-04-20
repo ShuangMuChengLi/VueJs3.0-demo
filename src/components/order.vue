@@ -90,7 +90,7 @@ export default {
 
     },
     gotoDemo(){
-      window.location.href = '/demo-dist';
+      window.location.href = 'http://localhost:10999/dist';
     }
   }
 };

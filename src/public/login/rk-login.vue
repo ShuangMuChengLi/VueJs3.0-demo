@@ -64,7 +64,7 @@ import $ from 'jquery';
 import {axios} from '../../js/tools/axios';
 import {util} from '../../js/tools/util';
 import {getCookie, setCookie} from '../../js/tools/cookie-util';
-import {api, JSONHeader} from '../../config/api-config';
+import {api, JSONHeader} from '../../../config/api-config';
 
 export default {
   name: 'RkLogin',
