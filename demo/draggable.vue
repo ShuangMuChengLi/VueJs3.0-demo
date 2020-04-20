@@ -32,7 +32,7 @@ export default {
     };
   },
   mounted() {
-    this.$emit('setCode', '/demo/draggable.vue');
+    this.$emit('setCode', '/draggable.vue');
     this.$emit('setInfo', `拖动其中一项到另一项上
     `);
   },

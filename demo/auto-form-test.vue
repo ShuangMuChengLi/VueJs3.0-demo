@@ -156,7 +156,7 @@ export default {
 
   },
   mounted: function () {
-    this.$emit('setCode', '/demo/auto-form-test.vue');
+    this.$emit('setCode', '/auto-form-test.vue');
     this.$emit('setInfo', '可配置的表单弹窗');
   },
   methods: {

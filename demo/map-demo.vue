@@ -125,7 +125,7 @@ export default {
   computed: {},
   watch: {},
   created: function () {
-    this.$emit('setCode', '/demo/map-demo.vue');
+    this.$emit('setCode', '/map-demo.vue');
     this.$emit('setInfo', `原生地图demo (demo/map-demo.vue)
       该demo瓦片在外网环境下，福州区域
     `);

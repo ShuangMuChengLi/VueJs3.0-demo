@@ -30,7 +30,7 @@ export default {
     };
   },
   mounted() {
-    this.$emit('setCode', '/demo/v-click-outside-demo.vue');
+    this.$emit('setCode', '/v-click-outside-demo.vue');
     this.$emit('setInfo', `
         <h3>指令：v-click-outside</h3>
         点击区域外触发事件的指令：可用于自定义下拉框，弹窗的关闭事件 <br />

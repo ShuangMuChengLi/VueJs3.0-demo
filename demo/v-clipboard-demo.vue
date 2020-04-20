@@ -29,7 +29,7 @@ export default {
     };
   },
   mounted() {
-    this.$emit('setCode', '/demo/v-clipboard-demo.vue');
+    this.$emit('setCode', '/v-clipboard-demo.vue');
     this.$emit('setInfo',
       `<h3>指令：v-clipboard</h3>
         剪切板操作的指令<br />

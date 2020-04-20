@@ -23,7 +23,7 @@ export default {
     };
   },
   mounted() {
-    this.$emit('setCode', '/demo/pic-adaption-demo.vue');
+    this.$emit('setCode', '/pic-adaption-demo.vue');
     this.$emit('setInfo', '图片自适应demo (demo/pic-adaption-demo.vue)');
   },
   methods:{

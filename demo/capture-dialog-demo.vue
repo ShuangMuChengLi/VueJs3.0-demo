@@ -30,7 +30,7 @@ export default {
     };
   },
   mounted() {
-    this.$emit('setCode', '/demo/capture-dialog-demo.vue');
+    this.$emit('setCode', '/capture-dialog-demo.vue');
     this.$emit('setInfo', '抓拍弹窗demo (demo/capture-dialog-demo.vue)');
   }
 };

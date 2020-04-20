@@ -57,7 +57,7 @@ export default {
     };
   },
   mounted() {
-    this.$emit('setCode', '/demo/vue-scroll-index-demo.vue');
+    this.$emit('setCode', '/vue-scroll-index-demo.vue');
     this.$emit('setInfo', '获取列表滚动到第几项的回调指令v-scroll-index(npm包：vue-scroll-index)');
   },
   methods:{

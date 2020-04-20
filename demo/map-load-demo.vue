@@ -83,7 +83,7 @@ export default {
     }
   },
   mounted(){
-    this.$emit('setCode', '/demo/map-load-demo.vue');
+    this.$emit('setCode', '/map-load-demo.vue');
     this.$emit('setInfo', `<p>厦门、重庆地图瓦片加载 (demo/map-load-demo.vue)</p>
       <p>该demo瓦片在视频网环境下</p>
     `);

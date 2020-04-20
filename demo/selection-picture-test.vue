@@ -28,7 +28,7 @@ export default {
 
   },
   mounted(){
-    this.$emit('setCode', '/demo/selection-picture-test.vue');
+    this.$emit('setCode', '/selection-picture-test.vue');
     this.$emit('setInfo', '框选并截取图片');
   },
   methods:{

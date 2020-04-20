@@ -20,7 +20,7 @@ export default {
 
   },
   mounted: function () {
-    this.$emit('setCode', '/demo/login-btn-test.vue');
+    this.$emit('setCode', '/login-btn-test.vue');
     this.$emit('setInfo', '登录按钮');
 
   },

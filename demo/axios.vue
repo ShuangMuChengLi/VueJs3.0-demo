@@ -31,7 +31,7 @@ export default {
     this.deleteLocalJson();
     this.putLocalJson();
     this.patchLocalJson();
-    this.$emit('setCode', '/demo/axios.vue');
+    this.$emit('setCode', '/axios.vue');
     this.$emit('setInfo', `本地开发时，设置config.api_local请求本地json文件数据。接口联调时，设置config.api请求服务器接口数据。json文件及目录应与接口结构一致。
       <a download="restful前端对接说明.doc" href="/demoaxios-demo.doc">restful前端对接说明</a>
     `);

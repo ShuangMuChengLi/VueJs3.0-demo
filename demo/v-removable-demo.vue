@@ -25,7 +25,7 @@
 export default {
   name: 'VRemovableDemo',
   mounted() {
-    this.$emit('setCode', '/demo/v-removable-demo.vue');
+    this.$emit('setCode', '/v-removable-demo.vue');
     this.$emit('setInfo',
       `<h3>指令：v-removable</h3>
         用于让html能够拖动的指令，主要用于弹窗的可拖动 v-removable(npm包：vue-removable）<br />

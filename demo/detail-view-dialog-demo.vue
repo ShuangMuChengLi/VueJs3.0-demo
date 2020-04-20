@@ -50,7 +50,7 @@ export default {
     };
   },
   mounted() {
-    this.$emit('setCode', '/demo/detail-view-dialog-demo.vue');
+    this.$emit('setCode', '/detail-view-dialog-demo.vue');
     this.$emit('setInfo', '查看大图的范例，使用前应该对后端给的数据进行重构');
   },
   methods:{

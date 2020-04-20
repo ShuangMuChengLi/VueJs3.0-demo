@@ -10,7 +10,7 @@ export default {
   name: 'WorkerDemo',
   mounted() {
     this.initWorker();
-    this.$emit('setCode', '/demo/worker-demo.vue');
+    this.$emit('setCode', '/worker-demo.vue');
     this.$emit('setInfo',
       `<h3>指令：web worker文件加载</h3>
         <p>file.worker.js为web worker文件</p>

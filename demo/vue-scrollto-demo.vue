@@ -91,7 +91,7 @@ export default {
     };
   },
   mounted() {
-    this.$emit('setCode', '/demo/vue-scrollto-demo.vue');
+    this.$emit('setCode', '/vue-scrollto-demo.vue');
     this.$emit('setInfo',
       `<h3>指令：v-scroll-to</h3>
         滚动到指定位置的指令<br />
