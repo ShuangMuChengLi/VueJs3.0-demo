@@ -1,0 +1,17 @@
+[
+	{"code":"","value":"全部","selected":true},
+	{"code":"A","value":"白色"},
+	{"code":"B","value":"灰色"},
+	{"code":"C","value":"黄色"},
+	{"code":"D","value":"粉色"},
+	{"code":"E","value":"红色"},
+	{"code":"F","value":"紫色"},
+	{"code":"G","value":"绿色"},
+	{"code":"H","value":"蓝色"},
+	{"code":"I","value":"棕色"},
+	{"code":"J","value":"黑色"},
+	{"code":"M","value":"深灰色"},
+	{"code":"K","value":"金色"},
+	{"code":"L","value":"青色"},
+	{"code":"Z","value":"其它"}
+]

@@ -1,0 +1,39 @@
+.timeline{
+  padding-left:25px;
+  //height: 100%;
+  .timeline-item{
+    height: 70px;
+    position: relative;
+    border-left:1px solid #4faff2;
+    cursor: pointer;
+    .order{
+      position: absolute;
+      left:-15px;
+      top: 0;
+      width:30px;
+      height: 30px;
+      line-height: 25px;
+      border-radius: 50%;
+      border:4px solid #bde0f8;
+      background-color: #4faff2;
+      color:#fff;
+      font-size: 14px;
+      text-align: center;
+
+    }
+    .title{
+      padding-left:20px;
+      height: 34px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: rgb(36, 197, 237);
+      font-size: 14px;
+      line-height: 34px;
+    }
+    .subTitle{
+      .title;
+      color:white;
+    }
+  }
+}
