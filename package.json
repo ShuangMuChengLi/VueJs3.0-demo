@@ -6,7 +6,13 @@
     "start": "vue-cli-service serve",
     "api": "set NODE_ENV=development&& node ./bin/www",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint --fix"
+    "lint": "vue-cli-service lint --fix",
+    "dockerNginxStart": "docker run --privileged=true -v /root/nginx/logs:/var/log/nginx/:rw -v /root/nginx/nginx.conf:/etc/nginx/nginx.conf:rw -v /root/dist:/root/dist:rw --name nginx -p 9998:80 -d nginx",
+    "publish-to-server": "npm run build && npm run to-server",
+    "to-server": "node ./bin/publish-script.js",
+    "download-nginx-config": "node ./bin/download-nginx-config.js",
+    "upload-nginx-config-by-docker": "node ./bin/upload-nginx-config-by-docker.js",
+    "upload-nginx-config-not-docker": "node ./bin/upload-nginx-config-not-docker.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -28,6 +34,7 @@
     "@vue/cli-plugin-vuex": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
     "@vue/eslint-config-standard": "^5.1.2",
+    "archiver": "^4.0.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
@@ -40,6 +47,7 @@
     "http-proxy-middleware": "^0.20.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "node-ssh": "^8.0.0",
     "vue-template-compiler": "^2.6.11"
   }
 }
