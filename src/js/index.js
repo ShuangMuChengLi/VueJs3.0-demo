@@ -1,9 +1,10 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-import {reactive, computed, createApp} from 'vue';
-const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 
-const DemoGrid = {
+import {reactive, computed, createApp} from 'vue';
+let capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+
+let DemoGrid = {
   template: '#grid-template',
   props: {
     data: Array,
@@ -11,12 +12,12 @@ const DemoGrid = {
     filterKey: String
   },
   setup(props) {
-    const state = reactive({
+    let state = reactive({
       sortKey: '',
       sortOrders: props.columns.reduce((o, key) => (o[key] = 1, o), {})
     });
 
-    const filteredData = computed(() => {
+    let filteredData = computed(() => {
       let { data, filterKey } = props;
       if (filterKey) {
         filterKey = filterKey.toLowerCase();
@@ -26,9 +27,9 @@ const DemoGrid = {
           });
         });
       }
-      const { sortKey } = state;
+      let { sortKey } = state;
       if (sortKey) {
-        const order = state.sortOrders[sortKey];
+        let order = state.sortOrders[sortKey];
         data = data.slice().sort((a, b) => {
           a = a[sortKey];
           b = b[sortKey];
@@ -52,6 +53,7 @@ const DemoGrid = {
   }
 };
 createApp({
+  template: '#main',
   components: {
     DemoGrid
   },
@@ -64,5 +66,8 @@ createApp({
       { name: 'Jackie Chan', power: 7000 },
       { name: 'Jet Li', power: 8000 }
     ]
-  })
+  }),
+  mounted() {
+    console.log(111);
+  }
 }).mount('#demo');

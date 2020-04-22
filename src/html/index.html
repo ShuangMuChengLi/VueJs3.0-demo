@@ -30,21 +30,21 @@
     </table>
     <p v-else>No matches found.</p>
 </script>
-<!-- DemoGrid component script -->
-<script>
-
+<!-- DemoGrid component template -->
+<script type="text/x-template" id="main">
+  <form id="search">
+    Search <input name="query" v-model="searchQuery">
+  </form>
+  <demo-grid
+    :data="gridData"
+    :columns="gridColumns"
+    :filter-key="searchQuery">
+  </demo-grid>
 </script>
 
 <!-- App template (in DOM) -->
 <div id="demo">
-    <form id="search">
-        Search <input name="query" v-model="searchQuery">
-    </form>
-    <demo-grid
-        :data="gridData"
-        :columns="gridColumns"
-        :filter-key="searchQuery">
-    </demo-grid>
+
 </div>
 <!-- App script -->
 <script>
