@@ -48,6 +48,7 @@
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "node-ssh": "^8.0.0",
+    "vue-cli-plugin-vue-next": "~0.1.2",
     "vue-template-compiler": "^2.6.11"
   }
 }
