@@ -1,30 +1,33 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es6': true,
-    'node':true
+  env: {
+    browser: true,
+    es6: true,
+    node: true
   },
-  'plugins': [
-    'vue',
+  plugins: [
+    'vue'
   ],
-  'extends': 'plugin:vue/recommended',
-  'globals': {
-    'Atomics': 'readonly',
-    'SharedArrayBuffer': 'readonly'
+  extends: [
+    'plugin:vue/vue3-essential',
+    '@vue/standard'
+  ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly'
   },
-  'parserOptions': {
-    'parser': 'babel-eslint',
-    'ecmaVersion': 2018,
-    'sourceType': 'module',
+  parserOptions: {
+    parser: 'babel-eslint',
+    ecmaVersion: 2018,
+    sourceType: 'module'
   },
-  'rules': {
-    'eqeqeq': ["error", "smart"],// 必须全等号代替等号
-    'vue/no-v-html':0,
-    'vue/html-indent':[
+  rules: {
+    eqeqeq: ['error', 'smart'], // 必须全等号代替等号
+    'vue/no-v-html': 0,
+    'vue/html-indent': [
       'error',
       2
     ],
-    'indent': [
+    indent: [
       'error',
       2
     ],
@@ -32,14 +35,14 @@ module.exports = {
     'no-multi-spaces': [
       'error'
     ],
-    'no-ternary': "warn",// 三元运算符会出现警告
-    "space-infix-ops": ["error"], // 二元运算符左右两边要有一个空格
-    'comma-spacing': ["error", { "before": false, "after": true }], // 逗号前没空格，逗号后有空格
-    'quotes': [
+    'no-ternary': 'warn', // 三元运算符会出现警告
+    'space-infix-ops': ['error'], // 二元运算符左右两边要有一个空格
+    'comma-spacing': ['error', { before: false, after: true }], // 逗号前没空格，逗号后有空格
+    quotes: [
       'error',
       'single'
     ],
-    'semi': [
+    semi: [
       'error',
       'always'
     ]
