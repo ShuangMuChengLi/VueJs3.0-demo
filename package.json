@@ -1,6 +1,6 @@
 {
   "name": "project-init",
-  "version": "3.0.0",
+  "version": "4.1.0",
   "private": true,
   "scripts": {
     "start": "vue-cli-service serve",
@@ -21,6 +21,7 @@
     "echarts": "^4.7.0",
     "element-ui": "^2.13.1",
     "jquery": "^3.5.0",
+    "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "ol": "^6.3.1",
     "vue": "^3.0.0-beta.1",

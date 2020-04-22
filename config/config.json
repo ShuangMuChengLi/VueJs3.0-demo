@@ -1,6 +1,6 @@
 {
   "comment":{
-    "buildTarget": "default: 打包全部， current:打包当前开发的路由， demo：打包demo",
+    "buildTarget": "default: 打包全部， current:打包当前开发的路由",
     "api": "远程API工程名",
     "api_local": "本地API工程名",
     "port": "端口",
