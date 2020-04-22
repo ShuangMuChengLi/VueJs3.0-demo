@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -17,6 +16,11 @@ module.exports = {
           chunks: 'all'
         }
       }
+    }
+  },
+  resolve: {
+    alias: {
+      'vue': 'vue/dist/vue.esm-bundler.js'
     }
   },
 
@@ -60,16 +64,6 @@ module.exports = {
           'xml-loader'
         ]
       },
-      // 设置全局exports
-      // {
-      //     test: require.resolve('./src/js/globals.js'),
-      //     use: 'exports-loader?file,parse=helpers.parse'
-      // },
-      // 设置this变量
-      // {
-      //     test: require.resolve('./src/js/index.js'),
-      //     use: 'imports-loader?this=>window'
-      // },
     ]
   },
   plugins: [
@@ -79,9 +73,5 @@ module.exports = {
       filename: 'index.html',
       inject: 'body'
     }),
-    // 提供全局变量
-    // new webpack.ProvidePlugin({
-    //     join: ['lodash', 'join']
-    // })
   ],
 };
