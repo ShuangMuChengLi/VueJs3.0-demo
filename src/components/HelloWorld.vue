@@ -1,12 +1,4 @@
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-};
-</script>
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -126,8 +118,38 @@ export default {
         >awesome-vue</a>
       </li>
     </ul>
+    <form id="search">
+      Search <input name="query" v-model="searchQuery">
+    </form>
+    <Grid
+      :data="gridData"
+      :columns="gridColumns"
+      :filter-key="searchQuery">
+    </Grid>
   </div>
 </template>
+<script>
+import Grid from '@/components/Grid.vue';
+export default {
+  name: 'HelloWorld',
+  data: () => ({
+    searchQuery: '',
+    gridColumns: ['name', 'power'],
+    gridData: [
+      { name: 'Chuck Norris', power: Infinity },
+      { name: 'Bruce Lee', power: 9000 },
+      { name: 'Jackie Chan', power: 7000 },
+      { name: 'Jet Li', power: 8000 }
+    ]
+  }),
+  components: {
+    Grid
+  },
+  props: {
+    msg: String
+  }
+};
+</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
@@ -145,4 +167,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>
