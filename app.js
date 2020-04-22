@@ -3,8 +3,6 @@ const express = require('express');
 const path = require('path');
 const url = require('url');
 const proxy = require('http-proxy-middleware');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
 const open = require('open');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -69,10 +67,6 @@ const apiProxyRemote = proxy('/xlcloud-custody-webapp', {
 app.use('/xlcloud-custody-webapp/*', apiProxyRemote);
 
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
-app.use(cookieParser());
 
 
 // catch 404 and forward to error handler

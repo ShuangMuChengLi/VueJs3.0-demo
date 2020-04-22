@@ -9,7 +9,8 @@
         "watch": "set NODE_ENV=watch&& webpack --progress --colors --watch  --config webpack.dev.js&&node ./bin/www",
         "watch:start": "set NODE_ENV=watch&&node ./bin/www",
         "push": "git push github master",
-        "pull": "git fetch github&&git pull github master"
+        "pull": "git fetch github&&git pull github master",
+        "lint": "eslint --fix --ext .js,.vue src"
     },
     "dependencies": {
         "axios": "^0.18.0",
