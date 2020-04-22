@@ -38,3 +38,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 版本：4.1.0
 1. vueJS2.0代码迁移到3.0，完成lint修复。
 2. lint校验规则从plugin:vue/recommended更改为plugin:vue/vue3-essential、@vue/standard
+##### todo
+目前还不支持elementUI,等待官网更新
