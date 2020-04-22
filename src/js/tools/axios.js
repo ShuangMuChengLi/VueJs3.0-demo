@@ -13,6 +13,10 @@ import querystring from 'querystring';
 function addQueryToUrl (url, query) {
   if (typeof url !== 'string') return '';
 
+  if (url.indexOf('http') === -1) {
+    url = window.location.origin + url;
+  }
+
   const urlObj = new URL(url);
   if (typeof query === 'string') {
     query = querystring.parse(query);

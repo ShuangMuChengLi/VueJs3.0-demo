@@ -4,8 +4,8 @@ import config from './config.json';
  * @type {{headers: {Content-Type: string}}}
  */
 export const JSONHeader = {
-  headers:{
-    'Content-Type':'application/json'
+  headers: {
+    'Content-Type': 'application/json'
   }
 };
 /**
@@ -13,8 +13,8 @@ export const JSONHeader = {
  * @type {{headers: {Content-Type: string}}}
  */
 export const fileHeader = {
-  headers:{
-    'Content-Type':'multipart/form-data'
+  headers: {
+    'Content-Type': 'multipart/form-data'
   }
 };
 /**
@@ -22,7 +22,7 @@ export const fileHeader = {
  * @type {{alarmInfo: {alarmInfoStatisticsByType: string}}}
  */
 export const api = {
-  'alarmInfo':{
-    'alarmInfoStatisticsByType':config.api_local + '/alarmInfo/alarmInfoStatisticsByType', // 获取告警信息(demo  可删除）
+  alarmInfo: {
+    alarmInfoStatisticsByType: config.api_local + '/alarmInfo/alarmInfoStatisticsByType' // 获取告警信息(demo  可删除）
   }
 };
