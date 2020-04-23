@@ -2,7 +2,7 @@
  * 开发环境路由
  */
 
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import _ from 'lodash';
 import { projectRoutes } from './modules/project';// 项目路由
 import { testRoutes } from './modules/test-routes';
@@ -13,8 +13,9 @@ routes.push({ path: '/', component: () => import('../views/order.vue') });
 routes.push({ path: '/order', component: () => import('../views/order.vue') });// 路由列表
 routes = _.concat(routes, testRoutes);
 console.log(routes);
+console.log(process.env.BASE_URL);
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes
 });
 

@@ -2,7 +2,7 @@
  * 当前开发的路由
  */
 import _ from 'lodash';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import { projectRoutes } from './modules/current';// 项目路由
 import { testRoutes } from './modules/test-routes';
 
@@ -12,7 +12,7 @@ routes.push({ path: '/', component: () => import('../views/current-order.vue') }
 routes.push({ path: '/order', component: () => import('../views/current-order.vue') });// 路由列表
 routes = _.concat(routes, testRoutes);
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes
 });
 

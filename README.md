@@ -40,3 +40,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 2. lint校验规则从plugin:vue/recommended更改为plugin:vue/vue3-essential、@vue/standard
 ##### TODO
 目前还不支持elementUI,等待官网更新
+
+####  20200423
+版本：4.1.1
+1. vue-router从history模式切换到hash模式
