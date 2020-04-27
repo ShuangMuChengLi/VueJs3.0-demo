@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { ref, watchEffect } from 'vue';
+import { ref, watchEffect, onBeforeMount } from 'vue';
 const API_URL = 'https://api.github.com/repos/vuejs/vue-next/commits?per_page=3&sha=';
 
 const truncate = v => {
@@ -38,6 +38,9 @@ export default {
     const currentBranch = ref('master');
     const commits = ref(null);
 
+    onBeforeMount(() => {
+      console.log('mounted');
+    });
     watchEffect(() => {
       fetch(`${API_URL}${currentBranch.value}`)
         .then(res => res.json())
