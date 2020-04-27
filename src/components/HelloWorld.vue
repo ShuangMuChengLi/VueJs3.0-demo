@@ -14,17 +14,42 @@
     <ul>
       <tree-item class="item" :model="treeState.treeData"></tree-item>
     </ul>
+    <h1>markerdown</h1>
+    <Markerdown />
+    <h1>svg</h1>
+    <div>
+      <!-- Use the polygraph component -->
+      <svg width="200" height="200">
+        <polygraph :stats="svgState"></polygraph>
+      </svg>
+      <!-- controls -->
+      <div v-for="stat in svgState" :key="stat.label">
+        <label>{{stat.label}}</label>
+        <input type="range" v-model="stat.value" min="0" max="100">
+        <span>{{stat.value}}</span>
+        <button @click="remove(stat)" class="remove">X</button>
+      </div>
+      <form id="add">
+        <input name="newlabel" v-model="newLabel">
+        <button @click="add">Add a Stat</button>
+      </form>
+      <pre id="raw">{{ svgState }}</pre>
+    </div>
   </div>
 </template>
 <script>
 import Grid from '@/components/Grid.vue';
 import TreeItem from '@/components/TreeItem.vue';
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
+import Markerdown from './Markerdown';
+import Polygraph from './Svg';
 export default {
   name: 'HelloWorld',
   components: {
+    Markerdown,
     Grid,
-    TreeItem
+    TreeItem,
+    Polygraph
   },
   setup (props) {
     const gridState = reactive({
@@ -96,9 +121,41 @@ export default {
       }
     });
 
+    const newLabel = ref('');
+    const svgState = reactive([
+      { label: 'A', value: 100 },
+      { label: 'B', value: 100 },
+      { label: 'C', value: 100 },
+      { label: 'D', value: 100 },
+      { label: 'E', value: 100 },
+      { label: 'F', value: 100 }
+    ]);
+    function add (e) {
+      e.preventDefault();
+      if (!newLabel.value) return;
+      svgState.push({
+        label: newLabel.value,
+        value: 100
+      });
+      newLabel.value = '';
+    }
+    function remove (stat) {
+      if (svgState.length > 3) {
+        svgState.splice(svgState.indexOf(stat), 1);
+      } else {
+        alert('Can\'t delete more!');
+      }
+    }
+
     return {
       gridState,
-      treeState
+
+      treeState,
+
+      svgState,
+      add,
+      remove,
+      newLabel
     };
   }
 };
