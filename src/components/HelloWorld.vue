@@ -35,6 +35,8 @@
       </form>
       <pre id="raw">{{ svgState }}</pre>
     </div>
+    <h1>commits</h1>
+    <commits />
   </div>
 </template>
 <script>
@@ -42,10 +44,12 @@ import Grid from '@/components/Grid.vue';
 import TreeItem from '@/components/TreeItem.vue';
 import { reactive, ref } from 'vue';
 import Markerdown from './Markerdown';
-import Polygraph from './Svg';
+import Polygraph from './Polygraph';
+import Commits from './Commits';
 export default {
   name: 'HelloWorld',
   components: {
+    Commits,
     Markerdown,
     Grid,
     TreeItem,

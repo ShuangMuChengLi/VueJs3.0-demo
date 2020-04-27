@@ -51,6 +51,7 @@
     "less-loader": "^5.0.0",
     "marked": "^1.0.0",
     "node-ssh": "^8.0.0",
+    "todomvc-app-css": "^2.3.0",
     "vue-cli-plugin-vue-next": "~0.1.2",
     "vue-template-compiler": "^2.6.11"
   }

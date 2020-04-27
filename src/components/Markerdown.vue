@@ -12,7 +12,9 @@ import _ from 'lodash';
 export default {
   name: 'Markerdown',
   setup () {
-    const input = ref('# hello');
+    const input = ref(`# hello
+1. hello
+2. world`);
     const output = computed(() => marked(input.value));
     const update = _.debounce(e => { input.value = e.target.value; }, 16);
 
@@ -26,5 +28,8 @@ export default {
 </script>
 
 <style scoped>
-
+  /deep/ol{
+    list-style-type: decimal ;
+    padding-left: 40px;
+  }
 </style>

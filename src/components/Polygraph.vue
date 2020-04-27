@@ -30,7 +30,7 @@ function valueToPoint (value, index, total) {
   };
 }
 export default {
-  name: 'Svg',
+  name: 'Polygraph',
   props: ['stats'],
   setup (props) {
     return {
