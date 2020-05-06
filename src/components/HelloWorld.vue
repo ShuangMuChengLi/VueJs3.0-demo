@@ -8,7 +8,9 @@
     <Grid
       :data="gridState.gridData"
       :columns="gridState.gridColumns"
-      :filter-key="gridState.searchQuery">
+      :filter-key="gridState.searchQuery"
+      @sort="sort"
+    >
     </Grid>
     <h1>树形</h1>
     <ul>
@@ -150,9 +152,12 @@ export default {
         alert('Can\'t delete more!');
       }
     }
-
+    function sort (key) {
+      console.log(key);
+    }
     return {
       gridState,
+      sort,
 
       treeState,
 

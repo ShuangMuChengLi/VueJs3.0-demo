@@ -39,13 +39,13 @@ export default {
     const commits = ref(null);
 
     onBeforeMount(() => {
-      console.log('mounted');
+      // console.log('mounted');
     });
     watchEffect(() => {
       fetch(`${API_URL}${currentBranch.value}`)
         .then(res => res.json())
         .then(data => {
-          console.log(data);
+          // console.log(data);
           commits.value = data;
         });
     });

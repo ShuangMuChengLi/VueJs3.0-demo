@@ -41,7 +41,8 @@ export default {
     columns: Array,
     filterKey: String
   },
-  setup (props) {
+  setup (props, context) {
+    console.log(context);
     const state = reactive({
       sortKey: '',
       sortOrders: props.columns.reduce((o, key) => {
@@ -73,6 +74,7 @@ export default {
     });
 
     function sortBy (key) {
+      context.emit('sort', key);
       state.sortKey = key;
       state.sortOrders[key] *= -1;
     }

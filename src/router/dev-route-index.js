@@ -12,8 +12,6 @@ let routes = _.cloneDeep(projectRoutes);
 routes.push({ path: '/', component: () => import('../views/order.vue') });
 routes.push({ path: '/order', component: () => import('../views/order.vue') });// 路由列表
 routes = _.concat(routes, testRoutes);
-console.log(routes);
-console.log(process.env.BASE_URL);
 const router = createRouter({
   history: createWebHashHistory(),
   routes
