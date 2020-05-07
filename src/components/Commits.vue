@@ -10,6 +10,7 @@
       v-model="currentBranch">
     <label :key="key + 'label'" :for="branch">{{ branch }}</label>
   </template>
+  <input v-model="state.text">
   <p>vuejs/vue@{{ currentBranch }}</p>
   <ul>
     <li v-for="{ html_url, sha, author, commit } in commits" :key="sha">
@@ -22,43 +23,48 @@
 </template>
 
 <script>
-import { ref, watchEffect, onBeforeMount } from 'vue';
-const API_URL = 'https://api.github.com/repos/vuejs/vue-next/commits?per_page=3&sha=';
+import { ref, watchEffect, onBeforeMount, reactive } from 'vue'
+const API_URL = 'https://api.github.com/repos/vuejs/vue-next/commits?per_page=3&sha='
 
 const truncate = v => {
-  const newline = v.indexOf('\n');
-  return newline > 0 ? v.slice(0, newline) : v;
-};
+  const newline = v.indexOf('\n')
+  return newline > 0 ? v.slice(0, newline) : v
+}
 
-const formatDate = v => v.replace(/T|Z/g, ' ');
+const formatDate = v => v.replace(/T|Z/g, ' ')
 
 export default {
   name: 'Commits',
   setup () {
-    const currentBranch = ref('master');
-    const commits = ref(null);
+    const currentBranch = ref('master')
+    const state = reactive({
+      text: 'my'
+    })
+    const commits = ref(null)
 
     onBeforeMount(() => {
       // console.log('mounted');
-    });
+    })
     watchEffect(() => {
+      console.log(state.text)
       fetch(`${API_URL}${currentBranch.value}`)
         .then(res => res.json())
         .then(data => {
           // console.log(data);
-          commits.value = data;
-        });
-    });
+          commits.value = data
+        })
+    })
 
     return {
       branches: ['master', 'sync'],
       currentBranch,
       commits,
+      state,
       truncate,
       formatDate
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>

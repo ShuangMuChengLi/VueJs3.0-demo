@@ -19,7 +19,7 @@
 </template>
 
 <script>
-const _ = require('lodash');
+const _ = require('lodash')
 export default {
   name: 'PersonLabel',
   props: {
@@ -56,51 +56,51 @@ export default {
       ],
       labelData: [],
       label: {}
-    };
+    }
   },
   watch: {
     labels: 'init'
   },
   mounted: function () {
-    this.init();
+    this.init()
   },
   methods: {
     init: function () {
-      let labelArr = [];
+      let labelArr = []
       if (this.labels) {
-        labelArr = this.labels.split(',');// 把获取到的参数储存到数组中
-        this.count = labelArr.length;
+        labelArr = this.labels.split(',')// 把获取到的参数储存到数组中
+        this.count = labelArr.length
         if (this.single) {
-          this.count = 1;
+          this.count = 1
         }
         if (this.limit) {
-          this.count = this.limit;
+          this.count = this.limit
         }
-        const labelData = [];
+        const labelData = []
         for (let i = 0; i < this.count; i++) {
           if (!labelArr[i]) {
-            continue;
+            continue
           }
 
-          const dataArray = labelArr[i].split('|');
+          const dataArray = labelArr[i].split('|')
           const item = {
             lf: dataArray[0] || '',
             rt: dataArray[1] || ''
-          };
-          const index = _.findIndex(this.classType, { name: item.lf });
+          }
+          const index = _.findIndex(this.classType, { name: item.lf })
           if (index === -1) {
-            item.class = 'theme-5';
+            item.class = 'theme-5'
           } else {
-            item.class = 'theme-' + this.classType[index].value;
+            item.class = 'theme-' + this.classType[index].value
           }
 
-          labelData.push(item);
+          labelData.push(item)
         }
-        this.labelData = labelData;
+        this.labelData = labelData
       }
     }
   }
-};
+}
 </script>
 
 <style scoped lang="less">

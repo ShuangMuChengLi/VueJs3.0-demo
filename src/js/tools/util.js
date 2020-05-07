@@ -2,10 +2,10 @@
  * Created by lin on 2017/7/28.
  */
 
-import moment from 'moment';
-import _ from 'lodash';
-import querystring from 'querystring';
-import { mathUtil } from './math-util';
+import moment from 'moment'
+import _ from 'lodash'
+import querystring from 'querystring'
+import { mathUtil } from './math-util'
 
 export const util = {
   /**
@@ -14,9 +14,9 @@ export const util = {
      */
   objectRemoveValueIsNull (obj) {
     for (const i in obj) {
-      const item = obj[i];
+      const item = obj[i]
       if (this.isNull(item)) {
-        delete obj[i];
+        delete obj[i]
       }
     }
   },
@@ -26,7 +26,7 @@ export const util = {
      * @returns {boolean}
      */
   isNull (arg1) {
-    return !arg1 && arg1 !== 0 && typeof arg1 !== 'boolean';
+    return !arg1 && arg1 !== 0 && typeof arg1 !== 'boolean'
   },
   /**
      * 判断对象为无属性对象
@@ -34,8 +34,8 @@ export const util = {
      * @returns {boolean} 如果为空对象，返回true  如果为非空对象，返回false
      */
   isEmptyObject (e) {
-    for (const t in e) return !1;
-    return !0;
+    for (const t in e) return !1
+    return !0
   },
   /**
      * 计算年龄
@@ -43,11 +43,11 @@ export const util = {
      * @returns {Number}
      */
   getAge (birthday) {
-    const birthdayTimestamp = moment(birthday, 'YYYY-MM-DD').toDate().getTime();
-    const nowTimestamp = new Date().getTime();
-    const tempTime = nowTimestamp - birthdayTimestamp;
-    const age = parseInt(tempTime / 1000 / 60 / 60 / 24 / 365);
-    return age;
+    const birthdayTimestamp = moment(birthday, 'YYYY-MM-DD').toDate().getTime()
+    const nowTimestamp = new Date().getTime()
+    const tempTime = nowTimestamp - birthdayTimestamp
+    const age = parseInt(tempTime / 1000 / 60 / 60 / 24 / 365)
+    return age
   },
   /**
      * 回车键事件
@@ -55,10 +55,10 @@ export const util = {
      * @param fn  回调函数
      */
   keydownEnter (e, fn) {
-    const theEvent = e || window.event;
-    const code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    const theEvent = e || window.event
+    const code = theEvent.keyCode || theEvent.which || theEvent.charCode
     if (code === 13) {
-      fn();
+      fn()
     }
   },
   /**
@@ -69,14 +69,14 @@ export const util = {
      */
   beyondShowDot (s, len) {
     if (s) {
-      const stringLength = s.length;
+      const stringLength = s.length
       if (stringLength <= len) {
-        return s;
+        return s
       } else {
-        return s.substr(0, len) + '...';
+        return s.substr(0, len) + '...'
       }
     } else {
-      return '';
+      return ''
     }
   },
   /**
@@ -89,10 +89,10 @@ export const util = {
   getItemByValue (obj, key, value) {
     for (const item of obj) {
       if (item[key] === value) {
-        return item;
+        return item
       }
     }
-    return null;
+    return null
   },
   /**
    * 清除字符串左右两边空格
@@ -100,10 +100,10 @@ export const util = {
    * @returns {XML|string|*}
    */
   trim (str) {
-    str = _.trim(str);
-    str = str.replace(/\u202D/g, '');
-    str = str.replace(/\u202C/g, '');
-    return str;
+    str = _.trim(str)
+    str = str.replace(/\u202D/g, '')
+    str = str.replace(/\u202C/g, '')
+    return str
   },
   /**
    * 验证返回值 200 正常
@@ -114,15 +114,15 @@ export const util = {
     if (data && data.data && data.data.code) {
       if (data.data.code === 200) {
         if (data.data.data || data.data.data === 0) {
-          return data.data.data;
+          return data.data.data
         } else {
-          return false;
+          return false
         }
       } else {
-        return false;
+        return false
       }
     } else {
-      return false;
+      return false
     }
   },
   /**
@@ -134,64 +134,64 @@ export const util = {
   verifyResponseDateNull (data) {
     if (data && data.data && data.data.code && data.data.code === 200) {
       if (data.data.code === 200) {
-        return true;
+        return true
       } else {
-        return false;
+        return false
       }
     } else {
-      return false;
+      return false
     }
   },
   noNoneGetParams (params, isJSON) {
-    const result = {};
-    params = params || {};
+    const result = {}
+    params = params || {}
 
     for (const key in params) {
       if (!_.isNull(params[key])) {
-        result[key] = params[key];
+        result[key] = params[key]
       }
     }
     if (isJSON) {
-      return result;
+      return result
     } else {
-      return querystring.stringify(result);
+      return querystring.stringify(result)
     }
   },
   // 数字前补零
   addZero (num, length) {
-    return (Array(length).join(0) + num).slice(-length);
+    return (Array(length).join(0) + num).slice(-length)
   },
   // 获取时间区间各个月份
   getMonthArray (data) {
-    const timeline = [];
-    let minMonth = null;
-    let maxMonth = null;
+    const timeline = []
+    let minMonth = null
+    let maxMonth = null
     for (const item of data) {
-      const itemMoment = moment(item);
+      const itemMoment = moment(item)
       if (!minMonth) {
-        minMonth = itemMoment;
-        maxMonth = itemMoment;
-        continue;
+        minMonth = itemMoment
+        maxMonth = itemMoment
+        continue
       }
       if (itemMoment.isBefore(minMonth)) {
-        minMonth = itemMoment;
-        continue;
+        minMonth = itemMoment
+        continue
       }
       if (itemMoment.isAfter(maxMonth)) {
-        maxMonth = itemMoment;
+        maxMonth = itemMoment
       }
     }
-    const formatMinMonth = minMonth.format('YYYY-MM');
-    let formatMaxMonth = maxMonth.format('YYYY-MM');
-    timeline.push(formatMaxMonth);
+    const formatMinMonth = minMonth.format('YYYY-MM')
+    let formatMaxMonth = maxMonth.format('YYYY-MM')
+    timeline.push(formatMaxMonth)
     while (formatMaxMonth !== formatMinMonth) {
-      const date = moment(formatMaxMonth).subtract(1, 'month');
-      const dateMonthYear = date.format('YYYY-MM');
-      timeline.push(dateMonthYear);
-      formatMaxMonth = dateMonthYear;
+      const date = moment(formatMaxMonth).subtract(1, 'month')
+      const dateMonthYear = date.format('YYYY-MM')
+      timeline.push(dateMonthYear)
+      formatMaxMonth = dateMonthYear
     }
-    timeline.reverse();
-    return timeline;
+    timeline.reverse()
+    return timeline
   },
 
   /**
@@ -202,51 +202,51 @@ export const util = {
      */
   async goto (url, basePage, self) {
     const fn = () => {
-      let sUrl = '';
+      let sUrl = ''
       if (basePage) {
-        sUrl = basePage;
+        sUrl = basePage
       } else {
-        sUrl = '/index.html';
+        sUrl = '/index.html'
       }
       if (!self) {
-        window.open(sUrl + '#' + url);
+        window.open(sUrl + '#' + url)
       } else {
-        window.location.href = sUrl + '#' + url;
+        window.location.href = sUrl + '#' + url
       }
-    };
-    fn();
+    }
+    fn()
   },
   setTitle (s) {
-    document.title = s;
+    document.title = s
   },
   toThousand (data) {
-    return mathUtil.toThousand(data);
+    return mathUtil.toThousand(data)
   },
   handleSuccess (res, alertMessage) {
-    const data = util.verifyResponse(res);
+    const data = util.verifyResponse(res)
     if (data) {
-      return data;
+      return data
     } else {
       if (alertMessage) {
-        this.vue.$message.error(res.data.message);
+        this.vue.$message.error(res.data.message)
       }
-      return false;
+      return false
     }
   },
   handleSuccessDateNull (res, alertMessage) {
-    const data = util.verifyResponseDateNull(res);
+    const data = util.verifyResponseDateNull(res)
     if (data) {
-      return true;
+      return true
     } else {
       if (alertMessage) {
-        this.vue.$message.error(res.data.message);
+        this.vue.$message.error(res.data.message)
       }
 
-      return false;
+      return false
     }
   },
   handleFail () {
-    return false;
+    return false
   },
   /**
    * 处理异常  登录过期  跳转登录页
@@ -264,7 +264,7 @@ export const util = {
       }
     }
     // console.error(e);
-    return false;
+    return false
   },
   /**
    * 事件防抖动，用于mousemove scroll等频繁触发的事件的优化
@@ -273,15 +273,15 @@ export const util = {
    * @return {Function}
    */
   debounce (action, delay) {
-    let timer = null;
+    let timer = null
     return function () {
-      const self = this;
-      const args = arguments;
-      clearTimeout(timer);
+      const self = this
+      const args = arguments
+      clearTimeout(timer)
       timer = setTimeout(function () {
-        action.apply(self, args);
-      }, delay);
-    };
+        action.apply(self, args)
+      }, delay)
+    }
   },
   /**
    * 事件节流，用于mousemove scroll等频繁触发的事件的优化
@@ -290,14 +290,14 @@ export const util = {
    * @return {Function}
    */
   throttle (action, delay) {
-    let statTime = 0;
+    let statTime = 0
     return function () {
-      const currTime = +new Date();
+      const currTime = +new Date()
       if (currTime - statTime > delay) {
-        action.apply(this, arguments);
-        statTime = currTime;
+        action.apply(this, arguments)
+        statTime = currTime
       }
-    };
+    }
   },
   /**
    * 二维数组排列组合函数（兼容上一版本，建议直接用mathUtil）
@@ -306,7 +306,7 @@ export const util = {
    */
   combination (list) {
     // 兼容上一版本，建议直接用mathUtil
-    return mathUtil.combination(list);
+    return mathUtil.combination(list)
   },
   /**
    * 树形筛选（兼容上一版本，建议直接用mathUtil）
@@ -321,7 +321,7 @@ export const util = {
    * @returns {[]}
    */
   treeFilter (tree, filterCondition) {
-    return mathUtil.treeFilter(tree, filterCondition);
+    return mathUtil.treeFilter(tree, filterCondition)
   },
   /**
    * 将图片转成base64
@@ -329,13 +329,13 @@ export const util = {
    * @returns {string}(base64)
    */
   picToBase64 (img) {
-    const canvas = document.createElement('canvas');
-    canvas.width = img.width;
-    canvas.height = img.height;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(img, 0, 0, img.width, img.height);
-    const dataUrl = canvas.toDataURL();
-    return dataUrl;
+    const canvas = document.createElement('canvas')
+    canvas.width = img.width
+    canvas.height = img.height
+    const ctx = canvas.getContext('2d')
+    ctx.drawImage(img, 0, 0, img.width, img.height)
+    const dataUrl = canvas.toDataURL()
+    return dataUrl
   },
   /**
    * 将base64转成文件
@@ -343,21 +343,21 @@ export const util = {
    * @returns {File}
    */
   base64toFile (img, name) {
-    const bstr = atob(img.split(',')[1]);
-    const mime = img.split(',')[0].match(/:(.*?);/)[1];
-    let n = bstr.length;
-    const u8arr = new Uint8Array(n);
+    const bstr = atob(img.split(',')[1])
+    const mime = img.split(',')[0].match(/:(.*?);/)[1]
+    let n = bstr.length
+    const u8arr = new Uint8Array(n)
     while (n--) {
-      u8arr[n] = bstr.charCodeAt(n);
+      u8arr[n] = bstr.charCodeAt(n)
     }
-    const file = new File([u8arr], name, { type: mime });
-    return file;
+    const file = new File([u8arr], name, { type: mime })
+    return file
   },
   capturePic () {
 
   },
   use (vue) {
-    this.vue = vue;
+    this.vue = vue
   },
   vue: null
-};
+}

@@ -1,4 +1,3 @@
-
 <template>
   <div class="hello">
     <h1>表格筛选</h1>
@@ -42,12 +41,13 @@
   </div>
 </template>
 <script>
-import Grid from '@/components/Grid.vue';
-import TreeItem from '@/components/TreeItem.vue';
-import { reactive, ref } from 'vue';
-import Markerdown from './Markerdown';
-import Polygraph from './Polygraph';
-import Commits from './Commits';
+import Grid from '@/components/Grid.vue'
+import TreeItem from '@/components/TreeItem.vue'
+import { reactive, ref } from 'vue'
+import Markerdown from './Markerdown'
+import Polygraph from './Polygraph'
+import Commits from './Commits'
+import test from '../thirdpart/bundle'
 export default {
   name: 'HelloWorld',
   components: {
@@ -58,6 +58,7 @@ export default {
     Polygraph
   },
   setup (props) {
+    console.log(test)
     const gridState = reactive({
       searchQuery: '',
       gridColumns: ['name', 'power'],
@@ -95,7 +96,11 @@ export default {
           }
         ]
       }
-    });
+    })
+    function sort (key) {
+      console.log(key)
+    }
+
     const treeState = reactive({
       treeData: {
         name: 'My Tree',
@@ -125,9 +130,9 @@ export default {
           }
         ]
       }
-    });
+    })
 
-    const newLabel = ref('');
+    const newLabel = ref('')
     const svgState = reactive([
       { label: 'A', value: 100 },
       { label: 'B', value: 100 },
@@ -135,26 +140,24 @@ export default {
       { label: 'D', value: 100 },
       { label: 'E', value: 100 },
       { label: 'F', value: 100 }
-    ]);
+    ])
     function add (e) {
-      e.preventDefault();
-      if (!newLabel.value) return;
+      e.preventDefault()
+      if (!newLabel.value) return
       svgState.push({
         label: newLabel.value,
         value: 100
-      });
-      newLabel.value = '';
+      })
+      newLabel.value = ''
     }
     function remove (stat) {
       if (svgState.length > 3) {
-        svgState.splice(svgState.indexOf(stat), 1);
+        svgState.splice(svgState.indexOf(stat), 1)
       } else {
-        alert('Can\'t delete more!');
+        alert('Can\'t delete more!')
       }
     }
-    function sort (key) {
-      console.log(key);
-    }
+
     return {
       gridState,
       sort,
@@ -165,9 +168,9 @@ export default {
       add,
       remove,
       newLabel
-    };
+    }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

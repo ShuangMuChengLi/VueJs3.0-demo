@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { reactive, computed, toRefs } from 'vue';
+import { reactive, computed, toRefs } from 'vue'
 export default {
   name: 'TreeItem', // necessary for self-reference
   template: '#item-template',
@@ -31,24 +31,24 @@ export default {
     const state = reactive({
       open: false,
       isFolder: computed(() => {
-        return props.model.children && props.model.children.length;
+        return props.model.children && props.model.children.length
       })
-    });
+    })
 
     function toggle () {
-      state.open = !state.open;
+      state.open = !state.open
     }
 
     function changeType () {
       if (!state.isFolder) {
-        props.model.children = [];
-        addChild();
-        state.open = true;
+        props.model.children = []
+        addChild()
+        state.open = true
       }
     }
 
     function addChild () {
-      props.model.children.push({ name: 'new stuff' });
+      props.model.children.push({ name: 'new stuff' })
     }
 
     return {
@@ -56,9 +56,9 @@ export default {
       toggle,
       changeType,
       addChild
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>

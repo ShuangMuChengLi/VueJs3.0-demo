@@ -1,12 +1,12 @@
 // vue.config.js
-const entryConfig = require('./config/entry-config');
-const config = require('./config/config');
-const path = require('path');
-let buildPath;
+const entryConfig = require('./config/entry-config')
+const config = require('./config/config')
+const path = require('path')
+let buildPath
 if (config.buildTarget === 'demo') {
-  buildPath = path.resolve(__dirname, './demo/dist');
+  buildPath = path.resolve(__dirname, './demo/dist')
 } else {
-  buildPath = path.resolve(__dirname, './dist');
+  buildPath = path.resolve(__dirname, './dist')
 }
 module.exports = {
   publicPath: '',
@@ -33,4 +33,4 @@ module.exports = {
       }
     }
   }
-};
+}

@@ -4,9 +4,9 @@ export default {
   increment (context) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        context.commit('increment');
-        resolve();
-      }, 1000);
-    });
+        context.commit('increment')
+        resolve()
+      }, 1000)
+    })
   }
-};
+}

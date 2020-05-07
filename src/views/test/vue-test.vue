@@ -9,14 +9,14 @@
 export default {
   name: 'VueTest',
   data () {
-    return {};
+    return {}
   },
   mounted () {
   },
   methods: {
 
   }
-};
+}
 </script>
 
 <style scoped>

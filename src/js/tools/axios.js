@@ -1,8 +1,8 @@
-import http from 'axios';
-import urlUtil from 'url';
-import { util } from './util';
-import { getCookie } from './cookie-util';
-import querystring from 'querystring';
+import http from 'axios'
+import urlUtil from 'url'
+import { util } from './util'
+import { getCookie } from './cookie-util'
+import querystring from 'querystring'
 
 /**
  * 往url中添加query参数
@@ -11,20 +11,20 @@ import querystring from 'querystring';
  * @returns {*}
  */
 function addQueryToUrl (url, query) {
-  if (typeof url !== 'string') return '';
+  if (typeof url !== 'string') return ''
 
   if (url.indexOf('http') === -1) {
-    url = window.location.origin + url;
+    url = window.location.origin + url
   }
 
-  const urlObj = new URL(url);
+  const urlObj = new URL(url)
   if (typeof query === 'string') {
-    query = querystring.parse(query);
+    query = querystring.parse(query)
   }
   for (const key in query) {
-    urlObj.searchParams.set(key, query[key]);
+    urlObj.searchParams.set(key, query[key])
   }
-  return urlUtil.format(urlObj);
+  return urlUtil.format(urlObj)
 }
 /**
  * 构建数据格式,默认form提交
@@ -33,26 +33,26 @@ function addQueryToUrl (url, query) {
  * @returns {*}
  */
 const getParams = (inputData, inputOption) => {
-  const type = typeof inputData;
+  const type = typeof inputData
   if (type === 'string') {
-    return inputData;
+    return inputData
   }
-  const ContentType = inputOption && inputOption.headers && inputOption.headers['Content-Type'];
+  const ContentType = inputOption && inputOption.headers && inputOption.headers['Content-Type']
   if (!ContentType) {
     // 默认Form提交
-    return util.noNoneGetParams(inputData);
+    return util.noNoneGetParams(inputData)
   }
   // JSON提交
   if (ContentType.indexOf('application/json') !== -1) {
-    return util.noNoneGetParams(inputData, true);
+    return util.noNoneGetParams(inputData, true)
   }
   // 文件提交
   if (ContentType.indexOf('multipart/form-data') !== -1) {
-    return inputData;
+    return inputData
   }
   // 默认Form提交
-  return util.noNoneGetParams(inputData);
-};
+  return util.noNoneGetParams(inputData)
+}
 
 /**
  * 构建options，添加token信息
@@ -60,23 +60,23 @@ const getParams = (inputData, inputOption) => {
  * @returns {*}
  */
 const getOption = (inputOptions) => {
-  const Authorization = getCookie('token');
+  const Authorization = getCookie('token')
   if (!Authorization) {
-    return inputOptions;
+    return inputOptions
   }
   if (!inputOptions) {
     return {
       headers: {
         Authorization: Authorization
       }
-    };
+    }
   }
   if (!inputOptions.headers) {
-    inputOptions.headers = {};
+    inputOptions.headers = {}
   }
-  inputOptions.headers.Authorization = Authorization;
-  return inputOptions;
-};
+  inputOptions.headers.Authorization = Authorization
+  return inputOptions
+}
 
 /**
  * post put patch公用方法
@@ -87,19 +87,19 @@ const getOption = (inputOptions) => {
  * @returns {Promise<*>}
  */
 async function dataMethod (type, url, data, option) {
-  let params = null;
+  let params = null
   if (data) {
-    params = getParams(data, option);// 重构数据
+    params = getParams(data, option)// 重构数据
   }
-  const axiosOption = getOption(option); // 添加token
+  const axiosOption = getOption(option) // 添加token
 
   return await http[type](url, params, axiosOption).then((res) => {
-    return res;
+    return res
   }).catch((e) => {
-    console.error(e);
-    util.handleError(e);
-    throw e;
-  });
+    console.error(e)
+    util.handleError(e)
+    throw e
+  })
 }
 
 /**
@@ -112,22 +112,22 @@ async function dataMethod (type, url, data, option) {
  */
 async function urlMethod (type, url, data, option) {
   if (data) {
-    let params = null;
-    const dataType = typeof data;
+    let params = null
+    const dataType = typeof data
     if (dataType === 'string') {
-      params = data;
+      params = data
     } else {
-      params = util.noNoneGetParams(data);
+      params = util.noNoneGetParams(data)
     }
-    url = addQueryToUrl(url, params);
+    url = addQueryToUrl(url, params)
   }
-  const axiosOption = getOption(option); // 添加token
+  const axiosOption = getOption(option) // 添加token
   return await http[type](url, axiosOption).then((res) => {
-    return res;
+    return res
   }).catch((e) => {
-    util.handleError(e);
-    throw e;
-  });
+    util.handleError(e)
+    throw e
+  })
 }
 export const axios = {
   /**
@@ -171,4 +171,4 @@ export const axios = {
    */
   delete: async (url, data, option) => urlMethod('delete', url, data, option)
 
-};
+}

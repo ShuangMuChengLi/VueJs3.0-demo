@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from 'jquery'
 const Nodes = {
   density: 20,
   drawDistance: 0,
@@ -17,23 +17,23 @@ const Nodes = {
   bgContext: null,
   bgContextPixelData: null,
   init: function () {
-    this.canvas = document.getElementById('nodes');
-    this.context = this.canvas.getContext('2d');
-    this.context.globalCompositeOperation = 'lighter';
-    this.canvas.style.display = 'block';
-    this.preparePoints();
-    this.draw();
-    this.wiggle();
+    this.canvas = document.getElementById('nodes')
+    this.context = this.canvas.getContext('2d')
+    this.context.globalCompositeOperation = 'lighter'
+    this.canvas.style.display = 'block'
+    this.preparePoints()
+    this.draw()
+    this.wiggle()
     setInterval(() => {
-      this.wiggle();
-    }, 650);
+      this.wiggle()
+    }, 650)
   },
   preparePoints: function () {
-    this.points = [];
+    this.points = []
     // let width, height, i, j;
-    const color = dotsColor;
-    const offsetTop = 110;
-    const offsetLeft = 110;
+    const color = dotsColor
+    const offsetTop = 110
+    const offsetLeft = 110
     this.points.push({
       x: 20 + offsetLeft,
       y: 80 + offsetTop,
@@ -42,7 +42,7 @@ const Nodes = {
       color: color,
       radius: 5,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 20 + offsetLeft,
       y: 90 + offsetTop,
@@ -51,7 +51,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: -0.3
-    });
+    })
     this.points.push({
       x: 24 + offsetLeft,
       y: 100 + offsetTop,
@@ -60,7 +60,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: -0.4
-    });
+    })
     this.points.push({
       x: 20 + offsetLeft,
       y: 105 + offsetTop,
@@ -69,7 +69,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: -0.6
-    });
+    })
     this.points.push({
       x: 30 + offsetLeft,
       y: 107 + offsetTop,
@@ -78,7 +78,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 30 + offsetLeft,
       y: 112 + offsetTop,
@@ -87,7 +87,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: -0.2
-    });
+    })
     this.points.push({
       x: 22 + offsetLeft,
       y: 115 + offsetTop,
@@ -96,7 +96,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: -0.7
-    });
+    })
     this.points.push({
       x: 30 + offsetLeft,
       y: 125 + offsetTop,
@@ -105,7 +105,7 @@ const Nodes = {
       color: color,
       radius: 5,
       opacityDelay: -0.5
-    });
+    })
     this.points.push({
       x: 30 + offsetLeft,
       y: 135 + offsetTop,
@@ -114,7 +114,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: -0.3
-    });
+    })
     this.points.push({
       x: 35 + offsetLeft,
       y: 132 + offsetTop,
@@ -123,7 +123,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 42 + offsetLeft,
       y: 140 + offsetTop,
@@ -132,7 +132,7 @@ const Nodes = {
       color: color,
       radius: 8,
       opacityDelay: -0.7
-    });
+    })
     this.points.push({
       x: 30 + offsetLeft,
       y: 143 + offsetTop,
@@ -141,7 +141,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 55 + offsetLeft,
       y: 143 + offsetTop,
@@ -150,7 +150,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: -0.4
-    });
+    })
     this.points.push({
       x: 56 + offsetLeft,
       y: 151 + offsetTop,
@@ -159,7 +159,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: -0.5
-    });
+    })
     this.points.push({
       x: 72 + offsetLeft,
       y: 150 + offsetTop,
@@ -168,7 +168,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: -0.9
-    });
+    })
     this.points.push({
       x: 73 + offsetLeft,
       y: 159 + offsetTop,
@@ -177,7 +177,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: -0.7
-    });
+    })
     this.points.push({
       x: 79 + offsetLeft,
       y: 162 + offsetTop,
@@ -186,7 +186,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 84 + offsetLeft,
       y: 161 + offsetTop,
@@ -195,7 +195,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: -0.4
-    });
+    })
     this.points.push({
       x: 90 + offsetLeft,
       y: 164 + offsetTop,
@@ -204,7 +204,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 98 + offsetLeft,
       y: 158 + offsetTop,
@@ -213,7 +213,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: -0.2
-    });
+    })
     this.points.push({
       x: 105 + offsetLeft,
       y: 150 + offsetTop,
@@ -222,7 +222,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: -0.7
-    });
+    })
     this.points.push({
       x: 107 + offsetLeft,
       y: 170 + offsetTop,
@@ -231,7 +231,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: -0.4
-    });
+    })
     this.points.push({
       x: 115 + offsetLeft,
       y: 159 + offsetTop,
@@ -240,7 +240,7 @@ const Nodes = {
       color: color,
       radius: 9,
       opacityDelay: -0.6
-    });
+    })
     this.points.push({
       x: 129 + offsetLeft,
       y: 152 + offsetTop,
@@ -249,7 +249,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 128 + offsetLeft,
       y: 142 + offsetTop,
@@ -258,7 +258,7 @@ const Nodes = {
       color: color,
       radius: 4,
       opacityDelay: -0.5
-    });
+    })
     this.points.push({
       x: 139 + offsetLeft,
       y: 138 + offsetTop,
@@ -267,7 +267,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 158 + offsetLeft,
       y: 134 + offsetTop,
@@ -276,7 +276,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: -0.3
-    });
+    })
     this.points.push({
       x: 144 + offsetLeft,
       y: 125 + offsetTop,
@@ -285,7 +285,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: -0.8
-    });
+    })
     this.points.push({
       x: 153 + offsetLeft,
       y: 121 + offsetTop,
@@ -294,7 +294,7 @@ const Nodes = {
       color: color,
       radius: 5,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 153 + offsetLeft,
       y: 112 + offsetTop,
@@ -303,7 +303,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: -0.7
-    });
+    })
     this.points.push({
       x: 153 + offsetLeft,
       y: 103 + offsetTop,
@@ -312,7 +312,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 157 + offsetLeft,
       y: 102 + offsetTop,
@@ -321,7 +321,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: -0.2
-    });
+    })
     this.points.push({
       x: 155 + offsetLeft,
       y: 99 + offsetTop,
@@ -330,7 +330,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: -0.6
-    });
+    })
     this.points.push({
       x: 162 + offsetLeft,
       y: 92 + offsetTop,
@@ -339,7 +339,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 155 + offsetLeft,
       y: 83 + offsetTop,
@@ -348,7 +348,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: -0.6
-    });
+    })
     this.points.push({
       x: 155 + offsetLeft,
       y: 74 + offsetTop,
@@ -357,7 +357,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: -0.4
-    });
+    })
     this.points.push({
       x: 148 + offsetLeft,
       y: 68 + offsetTop,
@@ -366,7 +366,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 145 + offsetLeft,
       y: 54 + offsetTop,
@@ -375,7 +375,7 @@ const Nodes = {
       color: color,
       radius: 5,
       opacityDelay: -0.6
-    });
+    })
     this.points.push({
       x: 152 + offsetLeft,
       y: 46 + offsetTop,
@@ -384,7 +384,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 136 + offsetLeft,
       y: 48 + offsetTop,
@@ -393,7 +393,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: -0.3
-    });
+    })
     this.points.push({
       x: 129 + offsetLeft,
       y: 35 + offsetTop,
@@ -402,7 +402,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: -0.2
-    });
+    })
     this.points.push({
       x: 118 + offsetLeft,
       y: 34 + offsetTop,
@@ -411,7 +411,7 @@ const Nodes = {
       color: color,
       radius: 6,
       opacityDelay: -0.6
-    });
+    })
     this.points.push({
       x: 116 + offsetLeft,
       y: 24 + offsetTop,
@@ -420,7 +420,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: -0.2
-    });
+    })
     this.points.push({
       x: 106 + offsetLeft,
       y: 25 + offsetTop,
@@ -429,7 +429,7 @@ const Nodes = {
       color: color,
       radius: 4,
       opacityDelay: -0.1
-    });
+    })
     this.points.push({
       x: 99 + offsetLeft,
       y: 31 + offsetTop,
@@ -438,7 +438,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 90 + offsetLeft,
       y: 23 + offsetTop,
@@ -447,7 +447,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: 0
-    });
+    })
 
     this.points.push({
       x: 80 + offsetLeft,
@@ -457,7 +457,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: -0.5
-    });
+    })
     this.points.push({
       x: 80 + offsetLeft,
       y: 20 + offsetTop,
@@ -466,7 +466,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: -0.4
-    });
+    })
     this.points.push({
       x: 73 + offsetLeft,
       y: 6 + offsetTop,
@@ -475,7 +475,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 71 + offsetLeft,
       y: 15 + offsetTop,
@@ -484,7 +484,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 72 + offsetLeft,
       y: 24 + offsetTop,
@@ -493,7 +493,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: -0.2
-    });
+    })
     this.points.push({
       x: 69 + offsetLeft,
       y: 32 + offsetTop,
@@ -502,7 +502,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: -0.3
-    });
+    })
     this.points.push({
       x: 61 + offsetLeft,
       y: 26 + offsetTop,
@@ -511,7 +511,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 62 + offsetLeft,
       y: 33 + offsetTop,
@@ -520,7 +520,7 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: -0.6
-    });
+    })
     this.points.push({
       x: 56 + offsetLeft,
       y: 32 + offsetTop,
@@ -529,7 +529,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: -0.1
-    });
+    })
     this.points.push({
       x: 48 + offsetLeft,
       y: 38 + offsetTop,
@@ -538,7 +538,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 43 + offsetLeft,
       y: 42 + offsetTop,
@@ -547,7 +547,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: -0.5
-    });
+    })
     this.points.push({
       x: 38 + offsetLeft,
       y: 49 + offsetTop,
@@ -556,7 +556,7 @@ const Nodes = {
       color: color,
       radius: 1,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 31 + offsetLeft,
       y: 58 + offsetTop,
@@ -565,7 +565,7 @@ const Nodes = {
       color: color,
       radius: 4,
       opacityDelay: -0.5
-    });
+    })
     this.points.push({
       x: 24 + offsetLeft,
       y: 65 + offsetTop,
@@ -574,7 +574,7 @@ const Nodes = {
       color: color,
       radius: 3,
       opacityDelay: 0
-    });
+    })
     this.points.push({
       x: 27 + offsetLeft,
       y: 73 + offsetTop,
@@ -583,63 +583,63 @@ const Nodes = {
       color: color,
       radius: 2,
       opacityDelay: 0
-    });
+    })
   },
   rdm: function (from, to) {
-    return Math.floor(Math.random() * (to - from + 1) + from);
+    return Math.floor(Math.random() * (to - from + 1) + from)
   },
   wiggle: function () {
     if (!Nodes.mouse.move) {
       for (let i = 0; i < this.points.length; i++) {
-        const currentPoint = this.points[i];
-        const newcx = currentPoint.originalX + this.rdm(-currentPoint.radius, currentPoint.radius);
-        const newcy = currentPoint.originalY + this.rdm(-currentPoint.radius, currentPoint.radius);
-        $(currentPoint).stop().animate({ x: newcx, y: newcy }, currentPoint.radius * 100, 'linear');
+        const currentPoint = this.points[i]
+        const newcx = currentPoint.originalX + this.rdm(-currentPoint.radius, currentPoint.radius)
+        const newcy = currentPoint.originalY + this.rdm(-currentPoint.radius, currentPoint.radius)
+        $(currentPoint).stop().animate({ x: newcx, y: newcy }, currentPoint.radius * 100, 'linear')
       }
     }
   },
   updatePoints: function () {
-    let i, currentPoint, theta, distance;
+    let i, currentPoint, theta, distance
     for (i = 0; i < this.points.length; i++) {
-      currentPoint = this.points[i];
-      theta = Math.atan2(currentPoint.y - this.mouse.y, currentPoint.x - this.mouse.x);
+      currentPoint = this.points[i]
+      theta = Math.atan2(currentPoint.y - this.mouse.y, currentPoint.x - this.mouse.x)
       if (this.mouse.down) {
         distance = this.reactionSensitivity * 200 / Math.sqrt((this.mouse.x - currentPoint.x) * (this.mouse.x - currentPoint.x) +
-                    (this.mouse.y - currentPoint.y) * (this.mouse.y - currentPoint.y));
+                    (this.mouse.y - currentPoint.y) * (this.mouse.y - currentPoint.y))
       } else {
         distance = this.reactionSensitivity * 100 / Math.sqrt((this.mouse.x - currentPoint.x) * (this.mouse.x - currentPoint.x) +
-                    (this.mouse.y - currentPoint.y) * (this.mouse.y - currentPoint.y));
+                    (this.mouse.y - currentPoint.y) * (this.mouse.y - currentPoint.y))
       }
-      currentPoint.x += Math.cos(theta) * distance + (currentPoint.originalX - currentPoint.x) * 0.05;
-      currentPoint.y += Math.sin(theta) * distance + (currentPoint.originalY - currentPoint.y) * 0.05;
+      currentPoint.x += Math.cos(theta) * distance + (currentPoint.originalX - currentPoint.x) * 0.05
+      currentPoint.y += Math.sin(theta) * distance + (currentPoint.originalY - currentPoint.y) * 0.05
     }
   },
   drawPoints: function () {
-    let i, currentPoint;
+    let i, currentPoint
     for (i = 0; i < this.points.length; i++) {
-      currentPoint = this.points[i];
-      this.context.fillStyle = 'rgba(' + currentPoint.color + ',.55)';
-      if (currentPoint.opacityDelay < 1) currentPoint.opacityDelay = currentPoint.opacityDelay + 0.025;
-      this.context.strokeStyle = 'rgb(' + currentPoint.color + ')';
-      this.context.beginPath();
-      this.context.arc(currentPoint.x, currentPoint.y, currentPoint.radius, 0, Math.PI * 2, true);
-      this.context.closePath();
-      this.context.fill();
+      currentPoint = this.points[i]
+      this.context.fillStyle = 'rgba(' + currentPoint.color + ',.55)'
+      if (currentPoint.opacityDelay < 1) currentPoint.opacityDelay = currentPoint.opacityDelay + 0.025
+      this.context.strokeStyle = 'rgb(' + currentPoint.color + ')'
+      this.context.beginPath()
+      this.context.arc(currentPoint.x, currentPoint.y, currentPoint.radius, 0, Math.PI * 2, true)
+      this.context.closePath()
+      this.context.fill()
     }
   },
   draw: function () {
     this.animation = requestAnimationFrame(function () {
-      Nodes.draw();
-    });
-    this.clear();
-    this.updatePoints();
-    this.drawPoints();
+      Nodes.draw()
+    })
+    this.clear()
+    this.updatePoints()
+    this.drawPoints()
   },
   clear: function () {
   }
-};
-const dotsColor = '36,164,255';
+}
+const dotsColor = '36,164,255'
 // Nodes.init();
 export {
   Nodes
-};
+}

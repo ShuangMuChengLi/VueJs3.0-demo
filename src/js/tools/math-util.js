@@ -14,41 +14,41 @@ export const mathUtil = {
    * 5、直到循环1循环结束，算法结束
    */
   combination (list) {
-    const pointList = []; // 游标列表
-    const maxLengthList = []; // 二维列表每一项的长度数组列表
-    let length = 1;
+    const pointList = [] // 游标列表
+    const maxLengthList = [] // 二维列表每一项的长度数组列表
+    let length = 1
     // 构建游标列表和二维列表每一项的长度数组列表
     for (let groupIndex = 0; groupIndex < list.length; groupIndex++) {
-      const group = list[groupIndex];
-      maxLengthList.push(group.length);
-      length = length * group.length;
-      pointList.push(0);
+      const group = list[groupIndex]
+      maxLengthList.push(group.length)
+      length = length * group.length
+      pointList.push(0)
     }
-    console.log(`${length}种组合`);
+    console.log(`${length}种组合`)
     /**
    * 游标列表更新函数
    */
     function updatePointList () {
       for (let i = pointList.length - 1; i > -1; i--) {
         if (pointList[i] < maxLengthList[i] - 1) {
-          pointList[i]++;
-          break;
+          pointList[i]++
+          break
         }
 
-        pointList[i] = 0;
+        pointList[i] = 0
       }
     }
-    const result = [];// 结果队列
+    const result = []// 结果队列
     for (let resultIndex = 0; resultIndex < length; resultIndex++) {
-      result[resultIndex] = [];
+      result[resultIndex] = []
       // 根据游标队列定位到各项item的位置
       for (let pointIndex = 0; pointIndex < pointList.length; pointIndex++) {
-        const point = pointList[pointIndex];
-        result[resultIndex].push(list[pointIndex][point]);
+        const point = pointList[pointIndex]
+        result[resultIndex].push(list[pointIndex][point])
       }
-      updatePointList();
+      updatePointList()
     }
-    return result;
+    return result
   },
   /**
    * 树形筛选
@@ -64,36 +64,36 @@ export const mathUtil = {
    */
   treeFilter (tree, filterCondition) {
     function throughFilter (treePart) {
-      const result = [];
+      const result = []
       for (const item of treePart) {
         if (filterCondition.indexOf(item.id) !== -1) {
-          result.push(item);
-          continue;
+          result.push(item)
+          continue
         }
 
         if (!item.children || !item.children.length) {
-          continue;
+          continue
         }
 
-        const childrenResult = throughFilter(item.children);
+        const childrenResult = throughFilter(item.children)
         if (childrenResult.length > 0) {
-          item.children = childrenResult;
-          result.push(item);
+          item.children = childrenResult
+          result.push(item)
         }
       }
-      return result;
+      return result
     }
-    return throughFilter(tree);
+    return throughFilter(tree)
   },
   toThousand (data) {
-    let value = data.toString();
-    let trans = '';
+    let value = data.toString()
+    let trans = ''
     while (value.length > 3) {
-      trans = ',' + value.slice(-3) + trans;
-      value = value.slice(0, value.length - 3);
+      trans = ',' + value.slice(-3) + trans
+      value = value.slice(0, value.length - 3)
     }
     if (value) {
-      return value + trans;
+      return value + trans
     }
   }
-};
+}

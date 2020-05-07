@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import echarts from 'echarts';
+import echarts from 'echarts'
 export default {
   name: 'DashBoardPie',
   /**
@@ -48,7 +48,7 @@ export default {
       echartsPie: null,
       timer: null,
       resizeTimer: null
-    };
+    }
   },
   computed: {
     /**
@@ -58,32 +58,32 @@ export default {
       return {
         width: this.param.width.toString(),
         height: this.param.width.toString()
-      };
+      }
     },
     /**
          * @Description 获取图表的位置的id；
          */
     getEchartsId () {
-      if (this.param.id) return this.param.id;
+      if (this.param.id) return this.param.id
 
-      return 'echartsPie';
+      return 'echartsPie'
     }
   },
   watch: {
     param: {
       handler (newValue, oldValue) {
-        this.init();
+        this.init()
       },
       deep: true
     }
   },
   mounted () {
-    this.init();
-    window.addEventListener('resize', this.resizeEvent);
+    this.init()
+    window.addEventListener('resize', this.resizeEvent)
   },
   beforeDestroy () {
-    clearInterval(this.timer);
-    window.removeEventListener('resize', this.resizeEvent);
+    clearInterval(this.timer)
+    window.removeEventListener('resize', this.resizeEvent)
   },
   methods: {
     init () {
@@ -91,17 +91,17 @@ export default {
            * 初始化饼图
            *
            */
-      this.initMyChartPie();
+      this.initMyChartPie()
     },
     resizeEvent () {
-      clearTimeout(this.resizeTimer);
+      clearTimeout(this.resizeTimer)
       this.resizeTimer = setTimeout(() => {
-        this.updateChartView();
-      }, 100);
+        this.updateChartView()
+      }, 100)
     },
     initMyChartPie () {
       if (this.echartsPie) {
-        this.echartsPie.clear();
+        this.echartsPie.clear()
       }
       /*
           * id:放置echarts的div的id;
@@ -110,24 +110,24 @@ export default {
           * realTimeValue ：实际值
           * value：echarts计算扇形大小时用 正常：value = realTimeValue ；异常：value = 0
           * */
-      let value, maxvalue, minvalue;
+      let value, maxvalue, minvalue
       if (this.param.maxvalue) {
-        maxvalue = Number(this.param.maxvalue);
+        maxvalue = Number(this.param.maxvalue)
       } else {
-        maxvalue = 100;
+        maxvalue = 100
       }
       if (this.param.minvalue) {
-        minvalue = Number(this.param.minvalue);
+        minvalue = Number(this.param.minvalue)
       } else {
-        minvalue = 0;
+        minvalue = 0
       }
-      const id = this.param.id || 'echartsPie';
-      const myChart = echarts.init(document.getElementById(id));
-      value = 0;
-      const realTimeValue = Number(this.param.realTimeValue);
-      value = realTimeValue;
-      const color1 = this.param.color1 || '#1d54f7';
-      const color2 = this.param.color2 || '#00cefc';
+      const id = this.param.id || 'echartsPie'
+      const myChart = echarts.init(document.getElementById(id))
+      value = 0
+      const realTimeValue = Number(this.param.realTimeValue)
+      value = realTimeValue
+      const color1 = this.param.color1 || '#1d54f7'
+      const color2 = this.param.color2 || '#00cefc'
       const colorStops = [
         {
           offset: 0,
@@ -137,7 +137,7 @@ export default {
           offset: 1,
           color: color2 || color1 // 100% 处的颜色
         }
-      ];
+      ]
       const option = {
         title: {
           text: '{number|' + realTimeValue + '}{unit|' + this.param.unit + '}',
@@ -196,19 +196,19 @@ export default {
             value: maxvalue - minvalue - value
           }]
         }]
-      };
+      }
 
-      myChart.setOption(option);
+      myChart.setOption(option)
       myChart.on('click', (params) => {
-        this.$emit('myChartClick', params);
-      });
-      this.echartsPie = myChart;
+        this.$emit('myChartClick', params)
+      })
+      this.echartsPie = myChart
     },
     updateChartView () {
-      this.echartsPie.resize();
+      this.echartsPie.resize()
     }
   }
-};
+}
 </script>
 
 <style scoped lang="less">

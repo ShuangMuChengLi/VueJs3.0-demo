@@ -9,15 +9,15 @@ export var storageUtil = {
      */
   getSession (key) {
     if (typeof (Storage) !== 'undefined' || typeof key != 'string') {
-      var value = sessionStorage.getItem(key);
+      var value = sessionStorage.getItem(key)
       try {
-        value = JSON.parse(value);
+        value = JSON.parse(value)
       } catch (e) {
 
       }
-      return value;
+      return value
     } else {
-      return false;
+      return false
     }
   },
   /**
@@ -29,12 +29,12 @@ export var storageUtil = {
   setSession (key, value) {
     if (typeof (Storage) !== 'undefined' || typeof key != 'string') {
       if (typeof value !== 'string') {
-        value = JSON.stringify(value);
+        value = JSON.stringify(value)
       }
-      sessionStorage.setItem(key, value);
-      return true;
+      sessionStorage.setItem(key, value)
+      return true
     } else {
-      return false;
+      return false
     }
   },
   /**
@@ -44,10 +44,10 @@ export var storageUtil = {
      */
   removeSession (key) {
     if (typeof (Storage) !== 'undefined' || typeof key != 'string') {
-      sessionStorage.removeItem(key);
-      return true;
+      sessionStorage.removeItem(key)
+      return true
     } else {
-      return false;
+      return false
     }
   },
   /**
@@ -56,10 +56,10 @@ export var storageUtil = {
      */
   clearSession () {
     if (typeof (Storage) !== 'undefined') {
-      sessionStorage.clear();
-      return true;
+      sessionStorage.clear()
+      return true
     } else {
-      return false;
+      return false
     }
   },
   /**
@@ -69,15 +69,15 @@ export var storageUtil = {
    */
   getLocalStorage (key) {
     if (typeof (Storage) !== 'undefined' || typeof key != 'string') {
-      var value = localStorage.getItem(key);
+      var value = localStorage.getItem(key)
       try {
-        value = JSON.parse(value);
+        value = JSON.parse(value)
       } catch (e) {
 
       }
-      return value;
+      return value
     } else {
-      return false;
+      return false
     }
   },
   /**
@@ -89,12 +89,12 @@ export var storageUtil = {
   setLocalStorage (key, value) {
     if (typeof (Storage) !== 'undefined' || typeof key != 'string') {
       if (typeof value !== 'string') {
-        value = JSON.stringify(value);
+        value = JSON.stringify(value)
       }
-      localStorage.setItem(key, value);
-      return true;
+      localStorage.setItem(key, value)
+      return true
     } else {
-      return false;
+      return false
     }
   },
   /**
@@ -104,10 +104,10 @@ export var storageUtil = {
    */
   removeLocalStorage (key) {
     if (typeof (Storage) !== 'undefined' || typeof key != 'string') {
-      localStorage.removeItem(key);
-      return true;
+      localStorage.removeItem(key)
+      return true
     } else {
-      return false;
+      return false
     }
   },
   /**
@@ -116,10 +116,10 @@ export var storageUtil = {
   */
   clearLocalStorage () {
     if (typeof (Storage) !== 'undefined') {
-      localStorage.clear();
-      return true;
+      localStorage.clear()
+      return true
     } else {
-      return false;
+      return false
     }
   }
-};
+}

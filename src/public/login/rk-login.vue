@@ -60,11 +60,11 @@
 </template>
 
 <script>
-import $ from 'jquery';
-import { axios } from '../../js/tools/axios';
-import { util } from '../../js/tools/util';
-import { setCookie } from '../../js/tools/cookie-util';
-import { JSONHeader } from '../../../config/api-config';
+import $ from 'jquery'
+import { axios } from '../../js/tools/axios'
+import { util } from '../../js/tools/util'
+import { setCookie } from '../../js/tools/cookie-util'
+import { JSONHeader } from '../../../config/api-config'
 
 export default {
   name: 'RkLogin',
@@ -87,7 +87,7 @@ export default {
         historyUrl: null
       },
       timer: null
-    };
+    }
   },
   computed: {
 
@@ -96,22 +96,22 @@ export default {
 
   },
   mounted () {
-    this.nodesInit();
-    this.init();
+    this.nodesInit()
+    this.init()
   },
   beforeDestroy () {
-    clearInterval(this.timer);
+    clearInterval(this.timer)
   },
   methods: {
     init () {
-      this.$refs.userName.focus();
-      document.addEventListener('keydown', this.keydownEnter);
+      this.$refs.userName.focus()
+      document.addEventListener('keydown', this.keydownEnter)
     },
     // 登录回车事件
     keydownEnter (e) {
       util.keydownEnter(e, () => {
-        this.userLogin();
-      });
+        this.userLogin()
+      })
     },
     // 用户登录
     async userLogin () {
@@ -120,28 +120,28 @@ export default {
           const result = await axios.post('the login api',
             this.loginForm, JSONHeader
           ).then((res) => {
-            const data = res.data;
+            const data = res.data
             if (data && data.success) {
-              return res.data;
+              return res.data
             } else {
-              this.$message.error('登录失败');
-              console.log(data.message);
-              return false;
+              this.$message.error('登录失败')
+              console.log(data.message)
+              return false
             }
           }).catch((e) => {
-            this.$message.error('登录失败');
-            console.log(e);
-            return false;
-          });
+            this.$message.error('登录失败')
+            console.log(e)
+            return false
+          })
           if (result) {
-            setCookie('token', result.result.token_type + result.result.access_token);
-            this.$message.success('登录成功');
+            setCookie('token', result.result.token_type + result.result.access_token)
+            this.$message.success('登录成功')
             setTimeout(() => {
-              this.$router.push('/index');
-            }, 1000);
+              this.$router.push('/index')
+            }, 1000)
           }
         }
-      });
+      })
     },
     // 生成小圆点
     nodesInit () {
@@ -168,31 +168,31 @@ export default {
         bgContextPixelData: null,
 
         init: function () {
-          this.canvas = document.getElementById('nodes');
-          this.context = this.canvas.getContext('2d');
-          this.context.globalCompositeOperation = 'lighter';
-          this.canvas.style.display = 'block';
+          this.canvas = document.getElementById('nodes')
+          this.context = this.canvas.getContext('2d')
+          this.context.globalCompositeOperation = 'lighter'
+          this.canvas.style.display = 'block'
 
           //                this.canvas.addEventListener('mousemove', this.mouseMove, false);
           //                this.canvas.addEventListener('mousedown', this.mouseDown, false);
           //                this.canvas.addEventListener('mouseup',   this.mouseUp,   false);
           //                this.canvas.addEventListener('mouseout',  this.mouseOut,  false);
 
-          this.preparePoints();
-          this.draw();
-          this.wiggle();
+          this.preparePoints()
+          this.draw()
+          this.wiggle()
 
           this.timer = setInterval(() => {
-            this.wiggle();
-          }, 650);
+            this.wiggle()
+          }, 650)
         },
 
         preparePoints: function () {
-          this.points = [];
+          this.points = []
 
-          var color = dotsColor;
-          var offsetTop = 150;
-          var offsetLeft = 0;
+          var color = dotsColor
+          var offsetTop = 150
+          var offsetLeft = 0
 
           this.points.push({
             x: 20 + offsetLeft,
@@ -202,7 +202,7 @@ export default {
             color: color,
             radius: 5,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 20 + offsetLeft,
             y: 90 + offsetTop,
@@ -211,7 +211,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: -0.3
-          });
+          })
           this.points.push({
             x: 24 + offsetLeft,
             y: 100 + offsetTop,
@@ -220,7 +220,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: -0.4
-          });
+          })
           this.points.push({
             x: 20 + offsetLeft,
             y: 105 + offsetTop,
@@ -229,7 +229,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: -0.6
-          });
+          })
           this.points.push({
             x: 30 + offsetLeft,
             y: 107 + offsetTop,
@@ -238,7 +238,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 30 + offsetLeft,
             y: 112 + offsetTop,
@@ -247,7 +247,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: -0.2
-          });
+          })
           this.points.push({
             x: 22 + offsetLeft,
             y: 115 + offsetTop,
@@ -256,7 +256,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: -0.7
-          });
+          })
           this.points.push({
             x: 30 + offsetLeft,
             y: 125 + offsetTop,
@@ -265,7 +265,7 @@ export default {
             color: color,
             radius: 5,
             opacityDelay: -0.5
-          });
+          })
           this.points.push({
             x: 30 + offsetLeft,
             y: 135 + offsetTop,
@@ -274,7 +274,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: -0.3
-          });
+          })
           this.points.push({
             x: 35 + offsetLeft,
             y: 132 + offsetTop,
@@ -283,7 +283,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 42 + offsetLeft,
             y: 140 + offsetTop,
@@ -292,7 +292,7 @@ export default {
             color: color,
             radius: 8,
             opacityDelay: -0.7
-          });
+          })
           this.points.push({
             x: 30 + offsetLeft,
             y: 143 + offsetTop,
@@ -301,7 +301,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 55 + offsetLeft,
             y: 143 + offsetTop,
@@ -310,7 +310,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: -0.4
-          });
+          })
           this.points.push({
             x: 56 + offsetLeft,
             y: 151 + offsetTop,
@@ -319,7 +319,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: -0.5
-          });
+          })
           this.points.push({
             x: 72 + offsetLeft,
             y: 150 + offsetTop,
@@ -328,7 +328,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: -0.9
-          });
+          })
 
           this.points.push({
             x: 73 + offsetLeft,
@@ -338,7 +338,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: -0.7
-          });
+          })
           this.points.push({
             x: 79 + offsetLeft,
             y: 162 + offsetTop,
@@ -347,7 +347,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 84 + offsetLeft,
             y: 161 + offsetTop,
@@ -356,7 +356,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: -0.4
-          });
+          })
           this.points.push({
             x: 90 + offsetLeft,
             y: 164 + offsetTop,
@@ -365,7 +365,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 98 + offsetLeft,
             y: 158 + offsetTop,
@@ -374,7 +374,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: -0.2
-          });
+          })
           this.points.push({
             x: 105 + offsetLeft,
             y: 150 + offsetTop,
@@ -383,7 +383,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: -0.7
-          });
+          })
           this.points.push({
             x: 107 + offsetLeft,
             y: 170 + offsetTop,
@@ -392,7 +392,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: -0.4
-          });
+          })
           this.points.push({
             x: 115 + offsetLeft,
             y: 159 + offsetTop,
@@ -401,7 +401,7 @@ export default {
             color: color,
             radius: 9,
             opacityDelay: -0.6
-          });
+          })
           this.points.push({
             x: 129 + offsetLeft,
             y: 152 + offsetTop,
@@ -410,7 +410,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 128 + offsetLeft,
             y: 142 + offsetTop,
@@ -419,7 +419,7 @@ export default {
             color: color,
             radius: 4,
             opacityDelay: -0.5
-          });
+          })
           this.points.push({
             x: 139 + offsetLeft,
             y: 138 + offsetTop,
@@ -428,7 +428,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 158 + offsetLeft,
             y: 134 + offsetTop,
@@ -437,7 +437,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: -0.3
-          });
+          })
           this.points.push({
             x: 144 + offsetLeft,
             y: 125 + offsetTop,
@@ -446,7 +446,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: -0.8
-          });
+          })
           this.points.push({
             x: 153 + offsetLeft,
             y: 121 + offsetTop,
@@ -455,7 +455,7 @@ export default {
             color: color,
             radius: 5,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 153 + offsetLeft,
             y: 112 + offsetTop,
@@ -464,7 +464,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: -0.7
-          });
+          })
 
           this.points.push({
             x: 153 + offsetLeft,
@@ -474,7 +474,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 157 + offsetLeft,
             y: 102 + offsetTop,
@@ -483,7 +483,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: -0.2
-          });
+          })
           this.points.push({
             x: 155 + offsetLeft,
             y: 99 + offsetTop,
@@ -492,7 +492,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: -0.6
-          });
+          })
           this.points.push({
             x: 162 + offsetLeft,
             y: 92 + offsetTop,
@@ -501,7 +501,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 155 + offsetLeft,
             y: 83 + offsetTop,
@@ -510,7 +510,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: -0.6
-          });
+          })
           this.points.push({
             x: 155 + offsetLeft,
             y: 74 + offsetTop,
@@ -519,7 +519,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: -0.4
-          });
+          })
           this.points.push({
             x: 148 + offsetLeft,
             y: 68 + offsetTop,
@@ -528,7 +528,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 145 + offsetLeft,
             y: 54 + offsetTop,
@@ -537,7 +537,7 @@ export default {
             color: color,
             radius: 5,
             opacityDelay: -0.6
-          });
+          })
           this.points.push({
             x: 152 + offsetLeft,
             y: 46 + offsetTop,
@@ -546,7 +546,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 136 + offsetLeft,
             y: 48 + offsetTop,
@@ -555,7 +555,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: -0.3
-          });
+          })
           this.points.push({
             x: 129 + offsetLeft,
             y: 35 + offsetTop,
@@ -564,7 +564,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: -0.2
-          });
+          })
           this.points.push({
             x: 118 + offsetLeft,
             y: 34 + offsetTop,
@@ -573,7 +573,7 @@ export default {
             color: color,
             radius: 6,
             opacityDelay: -0.6
-          });
+          })
           this.points.push({
             x: 116 + offsetLeft,
             y: 24 + offsetTop,
@@ -582,7 +582,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: -0.2
-          });
+          })
           this.points.push({
             x: 106 + offsetLeft,
             y: 25 + offsetTop,
@@ -591,7 +591,7 @@ export default {
             color: color,
             radius: 4,
             opacityDelay: -0.1
-          });
+          })
           this.points.push({
             x: 99 + offsetLeft,
             y: 31 + offsetTop,
@@ -600,7 +600,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 90 + offsetLeft,
             y: 23 + offsetTop,
@@ -609,7 +609,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: 0
-          });
+          })
 
           this.points.push({
             x: 80 + offsetLeft,
@@ -619,7 +619,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: -0.5
-          });
+          })
           this.points.push({
             x: 80 + offsetLeft,
             y: 20 + offsetTop,
@@ -628,7 +628,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: -0.4
-          });
+          })
           this.points.push({
             x: 73 + offsetLeft,
             y: 6 + offsetTop,
@@ -637,7 +637,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 71 + offsetLeft,
             y: 15 + offsetTop,
@@ -646,7 +646,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 72 + offsetLeft,
             y: 24 + offsetTop,
@@ -655,7 +655,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: -0.2
-          });
+          })
           this.points.push({
             x: 69 + offsetLeft,
             y: 32 + offsetTop,
@@ -664,7 +664,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: -0.3
-          });
+          })
           this.points.push({
             x: 61 + offsetLeft,
             y: 26 + offsetTop,
@@ -673,7 +673,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 62 + offsetLeft,
             y: 33 + offsetTop,
@@ -682,7 +682,7 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: -0.6
-          });
+          })
           this.points.push({
             x: 56 + offsetLeft,
             y: 32 + offsetTop,
@@ -691,7 +691,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: -0.1
-          });
+          })
           this.points.push({
             x: 48 + offsetLeft,
             y: 38 + offsetTop,
@@ -700,7 +700,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 43 + offsetLeft,
             y: 42 + offsetTop,
@@ -709,7 +709,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: -0.5
-          });
+          })
           this.points.push({
             x: 38 + offsetLeft,
             y: 49 + offsetTop,
@@ -718,7 +718,7 @@ export default {
             color: color,
             radius: 1,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 31 + offsetLeft,
             y: 58 + offsetTop,
@@ -727,7 +727,7 @@ export default {
             color: color,
             radius: 4,
             opacityDelay: -0.5
-          });
+          })
           this.points.push({
             x: 24 + offsetLeft,
             y: 65 + offsetTop,
@@ -736,7 +736,7 @@ export default {
             color: color,
             radius: 3,
             opacityDelay: 0
-          });
+          })
           this.points.push({
             x: 27 + offsetLeft,
             y: 73 + offsetTop,
@@ -745,108 +745,108 @@ export default {
             color: color,
             radius: 2,
             opacityDelay: 0
-          });
+          })
         },
 
         rdm: function (from, to) {
-          return Math.floor(Math.random() * (to - from + 1) + from);
+          return Math.floor(Math.random() * (to - from + 1) + from)
         },
 
         wiggle: function () {
           if (!Nodes.mouse.move) {
             for (var i = 0; i < this.points.length; i++) {
-              const currentPoint = this.points[i];
+              const currentPoint = this.points[i]
 
-              var newcx = currentPoint.originalX + this.rdm(-currentPoint.radius, currentPoint.radius);
-              var newcy = currentPoint.originalY + this.rdm(-currentPoint.radius, currentPoint.radius);
+              var newcx = currentPoint.originalX + this.rdm(-currentPoint.radius, currentPoint.radius)
+              var newcy = currentPoint.originalY + this.rdm(-currentPoint.radius, currentPoint.radius)
 
-              $(currentPoint).stop().animate({ x: newcx, y: newcy }, currentPoint.radius * 100, 'linear');
+              $(currentPoint).stop().animate({ x: newcx, y: newcy }, currentPoint.radius * 100, 'linear')
             }
           }
         },
 
         updatePoints: function () {
-          var i, currentPoint, theta, distance;
+          var i, currentPoint, theta, distance
 
           for (i = 0; i < this.points.length; i++) {
-            currentPoint = this.points[i];
+            currentPoint = this.points[i]
 
-            theta = Math.atan2(currentPoint.y - this.mouse.y, currentPoint.x - this.mouse.x);
+            theta = Math.atan2(currentPoint.y - this.mouse.y, currentPoint.x - this.mouse.x)
 
             if (this.mouse.down) {
               distance = this.reactionSensitivity * 200 / Math.sqrt((this.mouse.x - currentPoint.x) * (this.mouse.x - currentPoint.x) +
-                (this.mouse.y - currentPoint.y) * (this.mouse.y - currentPoint.y));
+                (this.mouse.y - currentPoint.y) * (this.mouse.y - currentPoint.y))
             } else {
               distance = this.reactionSensitivity * 100 / Math.sqrt((this.mouse.x - currentPoint.x) * (this.mouse.x - currentPoint.x) +
-                (this.mouse.y - currentPoint.y) * (this.mouse.y - currentPoint.y));
+                (this.mouse.y - currentPoint.y) * (this.mouse.y - currentPoint.y))
             }
 
-            currentPoint.x += Math.cos(theta) * distance + (currentPoint.originalX - currentPoint.x) * 0.05;
-            currentPoint.y += Math.sin(theta) * distance + (currentPoint.originalY - currentPoint.y) * 0.05;
+            currentPoint.x += Math.cos(theta) * distance + (currentPoint.originalX - currentPoint.x) * 0.05
+            currentPoint.y += Math.sin(theta) * distance + (currentPoint.originalY - currentPoint.y) * 0.05
           }
         },
 
         drawPoints: function () {
-          var i, currentPoint;
+          var i, currentPoint
 
           for (i = 0; i < this.points.length; i++) {
-            currentPoint = this.points[i];
+            currentPoint = this.points[i]
 
-            this.context.fillStyle = 'rgba(' + currentPoint.color + ',.55)';
-            if (currentPoint.opacityDelay < 1) currentPoint.opacityDelay = currentPoint.opacityDelay + 0.025;
-            this.context.strokeStyle = 'rgb(' + currentPoint.color + ')';
+            this.context.fillStyle = 'rgba(' + currentPoint.color + ',.55)'
+            if (currentPoint.opacityDelay < 1) currentPoint.opacityDelay = currentPoint.opacityDelay + 0.025
+            this.context.strokeStyle = 'rgb(' + currentPoint.color + ')'
 
-            this.context.beginPath();
-            this.context.arc(currentPoint.x, currentPoint.y, currentPoint.radius, 0, Math.PI * 2, true);
-            this.context.closePath();
-            this.context.fill();
+            this.context.beginPath()
+            this.context.arc(currentPoint.x, currentPoint.y, currentPoint.radius, 0, Math.PI * 2, true)
+            this.context.closePath()
+            this.context.fill()
           }
         },
 
         draw: function () {
           this.animation = requestAnimationFrame(function () {
-            Nodes.draw();
-          });
+            Nodes.draw()
+          })
 
-          this.clear();
-          this.updatePoints();
-          this.drawPoints();
+          this.clear()
+          this.updatePoints()
+          this.drawPoints()
         },
 
         clear: function () {
         },
 
         mouseDown: function (event) {
-          Nodes.mouse.down = true;
+          Nodes.mouse.down = true
         },
 
         mouseUp: function (event) {
-          Nodes.mouse.down = false;
+          Nodes.mouse.down = false
         },
 
         mouseMove: function (event) {
           for (var i = 0; i < Nodes.points.length; i++) {
-            $(Nodes.points[i]).stop();
+            $(Nodes.points[i]).stop()
           }
-          Nodes.mouse.x = event.offsetX || (event.layerX - Nodes.canvas.offsetLeft);
-          Nodes.mouse.y = event.offsetY || (event.layerY - Nodes.canvas.offsetTop);
-          Nodes.mouse.move = true;
+          Nodes.mouse.x = event.offsetX || (event.layerX - Nodes.canvas.offsetLeft)
+          Nodes.mouse.y = event.offsetY || (event.layerY - Nodes.canvas.offsetTop)
+          Nodes.mouse.move = true
         },
 
         mouseOut: function (event) {
-          Nodes.mouse.x = -1000;
-          Nodes.mouse.y = -1000;
-          Nodes.mouse.down = false;
-          Nodes.mouse.move = false;
+          Nodes.mouse.x = -1000
+          Nodes.mouse.y = -1000
+          Nodes.mouse.down = false
+          Nodes.mouse.move = false
         }
-      };
+      }
 
-      const dotsColor = '49,117,223';
+      const dotsColor = '49,117,223'
       // const dotsColor = '1,36,63';
-      Nodes.init();
+      Nodes.init()
     }
   }
-};
+}
 </script>
 
 <style scoped lang="less">

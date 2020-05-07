@@ -68,32 +68,32 @@
 </template>
 
 <script>
-import { projectRoutes } from '../router/modules/current';
-import { testRoutes } from '../router/modules/test-routes';
-import _ from 'lodash';
-const routeList = _.cloneDeep(projectRoutes);
+import { projectRoutes } from '../router/modules/current'
+import { testRoutes } from '../router/modules/test-routes'
+import _ from 'lodash'
+const routeList = _.cloneDeep(projectRoutes)
 export default {
   data () {
     return {
       projectRoutes: routeList,
       testRoutes
-    };
+    }
   },
   created () {
 
   },
   mounted () {
-    this.init();
+    this.init()
   },
   methods: {
     init () {
 
     },
     gotoDemo () {
-      window.location.href = 'http://localhost:10999/dist';
+      window.location.href = 'http://localhost:10999/dist'
     }
   }
-};
+}
 </script>
 
 <style scoped lang="less">

@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import { reactive, computed } from 'vue';
-const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+import { reactive, computed, onMounted, onBeforeUnmount } from 'vue'
+const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
 export default {
   props: {
     data: Array,
@@ -42,41 +42,49 @@ export default {
     filterKey: String
   },
   setup (props, context) {
-    console.log(context);
+    onMounted(() => {
+      console.log('页面渲染完毕')
+    })
+    onBeforeUnmount(() => {
+      console.log('页面销毁')
+    })
+    console.log(context)
     const state = reactive({
       sortKey: '',
       sortOrders: props.columns.reduce((o, key) => {
-        o[key] = 1;
-        return o;
+        o[key] = 1
+        return o
       }, {})
-    });
+    })
 
     const filteredData = computed(() => {
-      let { data, filterKey } = props;
+      let { data, filterKey } = props
       if (filterKey) {
-        filterKey = filterKey.toLowerCase();
+        filterKey = filterKey.toLowerCase()
         data = data.filter(row => {
           return Object.keys(row).some(key => {
-            return String(row[key]).toLowerCase().indexOf(filterKey) > -1;
-          });
-        });
+            return String(row[key]).toLowerCase().indexOf(filterKey) > -1
+          })
+        })
       }
-      const { sortKey } = state;
+      const { sortKey } = state
       if (sortKey) {
-        const order = state.sortOrders[sortKey];
+        const order = state.sortOrders[sortKey]
         data = data.slice().sort((a, b) => {
-          a = a[sortKey];
-          b = b[sortKey];
-          return (a === b ? 0 : a > b ? 1 : -1) * order;
-        });
+          a = a[sortKey]
+          b = b[sortKey]
+          return (a === b ? 0 : a > b ? 1 : -1) * order
+        })
       }
-      return data;
-    });
+      return data
+    })
 
     function sortBy (key) {
-      context.emit('sort', key);
-      state.sortKey = key;
-      state.sortOrders[key] *= -1;
+      context.emit('sort', key)
+      console.log(this)
+      // this.$emit('sort', key);
+      state.sortKey = key
+      state.sortOrders[key] *= -1
     }
 
     return {
@@ -84,9 +92,9 @@ export default {
       filteredData,
       sortBy,
       capitalize
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>

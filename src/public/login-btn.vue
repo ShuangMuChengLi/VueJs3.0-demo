@@ -25,10 +25,10 @@
 </template>
 
 <script>
-import { Nodes } from '../js/tools/nodes';
+import { Nodes } from '../js/tools/nodes'
 export default {
   data () {
-    return {};
+    return {}
   },
   computed: {},
   watch: {},
@@ -36,15 +36,15 @@ export default {
 
   },
   mounted: function () {
-    Nodes.init();// 登录动态图标
+    Nodes.init()// 登录动态图标
   },
   methods: {
     userLogin () {
-      this.$emit('click');
+      this.$emit('click')
     }
   }
 
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

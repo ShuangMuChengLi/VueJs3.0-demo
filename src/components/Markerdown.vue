@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import { computed, reactive } from 'vue';
-import marked from 'marked';
-import _ from 'lodash';
+import { computed, reactive } from 'vue'
+import marked from 'marked'
+import _ from 'lodash'
 export default {
   name: 'Markerdown',
   setup () {
@@ -16,17 +16,17 @@ export default {
       input: `# hello
 1. hello
 2. world`
-    });
-    const output = computed(() => marked(state.input));
-    const update = _.debounce(e => { state.input = e.target.value; }, 16);
+    })
+    const output = computed(() => marked(state.input))
+    const update = _.debounce(e => { state.input = e.target.value }, 16)
 
     return {
       state,
       output,
       update
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>
